@@ -1,0 +1,54 @@
+{
+  "formula": "RbInO2 - Hexagonal Structure",
+  "lattice": [
+    [
+      5.42,
+      0.0,
+      0.0
+    ],
+    [
+      -2.71,
+      4.69,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      8.1
+    ]
+  ],
+  "positions": [
+    [
+      0.333,
+      0.667,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.333,
+      0.667,
+      0.5
+    ],
+    [
+      0.667,
+      0.333,
+      0.75
+    ]
+  ],
+  "species": [
+    "In",
+    "O",
+    "O",
+    "Rb"
+  ],
+  "energy": -0.9423497915267944,
+  "decomposition_energy": -0.9423497915267944,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

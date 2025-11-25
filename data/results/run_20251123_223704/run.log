@@ -1,0 +1,507 @@
+2025-11-23 22:37:08,193 - __main__ - INFO - Loading configuration from config/config.yaml
+2025-11-23 22:37:08,196 - __main__ - INFO - Initializing Orchestrator Agent...
+2025-11-23 22:37:08,227 - src.core.evaluator - INFO - Loading CHGNET model...
+2025-11-23 22:37:09,431 - src.core.evaluator - INFO - CHGNet loaded successfully
+2025-11-23 22:37:09,431 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 22:37:09,443 - __main__ - INFO - Loading initial structures from data/reference_examples/
+2025-11-23 22:37:09,443 - src.agents.orchestrator - INFO - Initializing search...
+2025-11-23 22:37:09,443 - src.agents.orchestrator - INFO - Loading reference examples from data/reference_examples/
+2025-11-23 22:37:09,444 - src.utils.data_manager - INFO - Loaded 3 structures from data/reference_examples/
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Loaded 3 reference examples:
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO -   - CaTiO3 - Perovskite Structure
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO -   - SiO2 - Quartz Structure
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO -   - NaCl - Rock Salt Structure
+2025-11-23 22:37:09,444 - src.agents.workers.structure_generator - INFO - Set 3 reference examples for format
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Initialization complete. Ready to generate structures.
+2025-11-23 22:37:09,444 - __main__ - INFO - 
+============================================================
+2025-11-23 22:37:09,444 - __main__ - INFO - Starting MatLLMSearch ACE Loop
+2025-11-23 22:37:09,444 - __main__ - INFO - ============================================================
+
+2025-11-23 22:37:09,444 - __main__ - INFO - 
+============================================================
+2025-11-23 22:37:09,444 - __main__ - INFO - ITERATION 1
+2025-11-23 22:37:09,444 - __main__ - INFO - ============================================================
+
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 1) ===
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Generating 10 new structures...
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Tool selection agent analyzing state...
+2025-11-23 22:37:09,444 - src.agents.tool_selector - INFO - Tool selector analyzing state and choosing tools...
+2025-11-23 22:37:09,444 - src.agents.tool_selector - INFO - Empty parent pool - using only 'new' tool
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO - Executing 10 tool actions...
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO -   Action 1/10: new
+2025-11-23 22:37:09,444 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:09,444 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:09,444 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:12,247 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:12,255 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:12,255 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:12,255 - src.agents.orchestrator - INFO -   Action 2/10: new
+2025-11-23 22:37:12,255 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:12,255 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:12,255 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:15,119 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:15,119 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:15,119 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:15,120 - src.agents.orchestrator - INFO -   Action 3/10: new
+2025-11-23 22:37:15,120 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:15,120 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:15,120 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:17,799 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:17,806 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:17,806 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:17,806 - src.agents.orchestrator - INFO -   Action 4/10: new
+2025-11-23 22:37:17,806 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:17,806 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:17,806 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:22,113 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:22,117 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:22,117 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:22,117 - src.agents.orchestrator - INFO -   Action 5/10: new
+2025-11-23 22:37:22,117 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:22,117 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:22,117 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:24,371 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:24,375 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:24,375 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:24,375 - src.agents.orchestrator - INFO -   Action 6/10: new
+2025-11-23 22:37:24,375 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:24,375 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:24,375 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:26,028 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:26,046 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:26,046 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:26,046 - src.agents.orchestrator - INFO -   Action 7/10: new
+2025-11-23 22:37:26,046 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:26,046 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:26,046 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:28,794 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:28,799 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:28,799 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:28,799 - src.agents.orchestrator - INFO -   Action 8/10: new
+2025-11-23 22:37:28,799 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:28,799 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:28,799 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:31,593 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:31,606 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:31,606 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:31,606 - src.agents.orchestrator - INFO -   Action 9/10: new
+2025-11-23 22:37:31,606 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:31,606 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:31,606 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:34,417 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:34,423 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:34,423 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:34,423 - src.agents.orchestrator - INFO -   Action 10/10: new
+2025-11-23 22:37:34,423 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:37:34,423 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:37:34,424 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:37:36,995 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:37,002 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:37:37,003 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:37:37,003 - src.agents.orchestrator - INFO - Generated 10 structures from tools
+2025-11-23 22:37:37,003 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 22:37:37,003 - src.core.evaluator - INFO - Loading ORB model...
+2025-11-23 22:37:37,093 - src.core.evaluator - INFO - Loading ORB model: orb-v3 on cpu
+/home/ctong29/miniconda3/envs/matllm_agent/lib/python3.11/site-packages/orb_models/utils.py:30: UserWarning: Setting global torch default dtype to torch.float32.
+  warnings.warn(f"Setting global torch default dtype to {torch_dtype}.")
+2025-11-23 22:37:37,456 - cached_path - INFO - cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-20-mpa-20250404.ckpt is up-to-date
+2025-11-23 22:37:38,865 - src.core.evaluator - INFO - ORB-V3 loaded successfully on cpu
+2025-11-23 22:37:38,865 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 22:37:38,865 - src.agents.orchestrator - INFO -   Evaluating 1/10: Be2SiN4 - New Hexagonal Structure
+2025-11-23 22:37:53,145 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:37:53,145 - src.agents.orchestrator - INFO -   Evaluating 2/10: Be2GeO4 - New Orthorhombic Structure
+2025-11-23 22:37:56,345 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:37:56,345 - src.agents.orchestrator - INFO -   Evaluating 3/10: ZnGa2S4 - Ternary Sulfide Spinel Structure
+2025-11-23 22:37:58,905 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:37:58,906 - src.agents.orchestrator - INFO -   Evaluating 4/10: BNAl - Novel Mixed Structure
+2025-11-23 22:37:58,932 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:37:58,932 - src.agents.orchestrator - INFO -   Evaluating 5/10: LiGaN2 - Ternary Nitride Structure
+2025-11-23 22:37:59,345 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:37:59,345 - src.agents.orchestrator - INFO -   Evaluating 6/10: SrAlN2 - Orthorhombic Structure
+2025-11-23 22:38:02,921 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:02,922 - src.agents.orchestrator - INFO -   Evaluating 7/10: LiAlS2 - New Wide-Bandgap Semiconductor
+2025-11-23 22:38:03,971 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:03,971 - src.agents.orchestrator - INFO -   Evaluating 8/10: ZnMgF2 - Ternary Fluorite Structure
+2025-11-23 22:38:04,001 - src.core.evaluator - ERROR - Relaxation failed with orb: data must be finite, check for nan or inf values
+2025-11-23 22:38:04,001 - src.agents.orchestrator - INFO -   Evaluating 9/10: K2ZnSiO4 - Tetrahedral Framework Structure
+2025-11-23 22:38:10,841 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:10,841 - src.agents.orchestrator - INFO -   Evaluating 10/10: Li2ZnN2 - Novel Tetrahedrite-Like Structure
+2025-11-23 22:38:10,873 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - Valid: 90.0%
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - Metastable: 90.0%
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - Best Ed: -6.252 eV/atom
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 22:38:10,873 - src.agents.hypothesis_gen - INFO - Generating hypothesis for next iteration
+2025-11-23 22:38:10,873 - src.agents.hypothesis_gen - INFO - Thought: Insufficient energy data from parents. Focus on generating diverse candidates and obtaining valid energies.
+2025-11-23 22:38:10,873 - src.agents.hypothesis_gen - INFO - Action: Generate diverse initial structures to gather energy estimates
+2025-11-23 22:38:10,873 - src.agents.hypothesis_gen - INFO - Expected outcome: Expected to generate structures with improved stability based on Generate diverse initial structures to gather energy estimates
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO - New strategy generated:
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO -   Thought: Insufficient energy data from parents. Focus on generating diverse candidates an...
+2025-11-23 22:38:10,873 - src.agents.orchestrator - INFO -   Action: Generate diverse initial structures to gather energy estimates
+2025-11-23 22:38:10,873 - src.core.evolution - INFO - Selected 10 structures from 10 candidates
+2025-11-23 22:38:10,875 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_223704
+2025-11-23 22:38:10,875 - __main__ - INFO - 
+============================================================
+2025-11-23 22:38:10,875 - __main__ - INFO - ITERATION 2
+2025-11-23 22:38:10,875 - __main__ - INFO - ============================================================
+
+2025-11-23 22:38:10,875 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 2) ===
+2025-11-23 22:38:10,875 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 22:38:10,875 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 22:38:10,875 - src.agents.orchestrator - INFO - Generating 10 new structures...
+2025-11-23 22:38:10,875 - src.agents.orchestrator - INFO - Tool selection agent analyzing state...
+2025-11-23 22:38:10,875 - src.agents.tool_selector - INFO - Tool selector analyzing state and choosing tools...
+2025-11-23 22:38:10,875 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:38:13,311 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO - Selected 10 tool actions:
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - new: {'tool': 'new'}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - new: {'tool': 'new'}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 0, 'old_element': 'O', 'new_element': 'S'}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 1, 'old_element': 'N', 'new_element': 'P'}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - mix: {'tool': 'mix', 'parent1': 0, 'parent2': 1, 'ratio': 0.5}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - mix: {'tool': 'mix', 'parent1': 2, 'parent2': 3, 'ratio': 0.7}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - mutate: {'tool': 'mutate', 'parent': 0, 'strength': 0.15}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - mutate: {'tool': 'mutate', 'parent': 1, 'strength': 0.1}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 2, 'old_element': 'Sr', 'new_element': 'Ca'}
+2025-11-23 22:38:13,316 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 3, 'old_element': 'Zn', 'new_element': 'Mg'}
+2025-11-23 22:38:13,316 - src.agents.orchestrator - INFO - Executing 10 tool actions...
+2025-11-23 22:38:13,316 - src.agents.orchestrator - INFO -   Action 1/10: new
+2025-11-23 22:38:13,316 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:38:13,316 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:38:13,316 - src.agents.workers.structure_generator - INFO - Using strategy: REASONING:
+Insufficient energy data from parents. Focus on generating diverse candidates and obtaini...
+2025-11-23 22:38:13,316 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:38:15,981 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:15,992 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:38:15,992 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:38:15,992 - src.agents.orchestrator - INFO -   Action 2/10: new
+2025-11-23 22:38:15,992 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:38:15,992 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:38:15,992 - src.agents.workers.structure_generator - INFO - Using strategy: REASONING:
+Insufficient energy data from parents. Focus on generating diverse candidates and obtaini...
+2025-11-23 22:38:15,993 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:38:18,909 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:18,913 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:38:18,913 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:38:18,913 - src.agents.orchestrator - INFO -   Action 3/10: substitute
+2025-11-23 22:38:18,913 - src.core.operators - INFO - Substituting O → S in Be2GeO4
+2025-11-23 22:38:18,913 - src.agents.orchestrator - INFO -   Action 4/10: substitute
+2025-11-23 22:38:18,913 - src.core.operators - INFO - Substituting N → P in Be2SiN4
+2025-11-23 22:38:18,913 - src.agents.orchestrator - INFO -   Action 5/10: mix
+2025-11-23 22:38:18,913 - src.core.operators - INFO - Mixing Be2GeO4 × Be2SiN4 (ratio=0.50)
+2025-11-23 22:38:18,913 - src.agents.orchestrator - INFO -   Action 6/10: mix
+2025-11-23 22:38:18,913 - src.core.operators - INFO - Mixing SrAlN2 × K2ZnSiO4 (ratio=0.70)
+2025-11-23 22:38:18,913 - src.agents.orchestrator - INFO -   Action 7/10: mutate
+2025-11-23 22:38:18,913 - src.core.operators - INFO - Mutating Be2GeO4 with strength=0.15
+2025-11-23 22:38:18,914 - src.agents.orchestrator - INFO -   Action 8/10: mutate
+2025-11-23 22:38:18,914 - src.core.operators - INFO - Mutating Be2SiN4 with strength=0.1
+2025-11-23 22:38:18,914 - src.agents.orchestrator - INFO -   Action 9/10: substitute
+2025-11-23 22:38:18,914 - src.core.operators - INFO - Substituting Sr → Ca in SrAlN2
+2025-11-23 22:38:18,914 - src.agents.orchestrator - INFO -   Action 10/10: substitute
+2025-11-23 22:38:18,914 - src.core.operators - INFO - Substituting Zn → Mg in K2ZnSiO4
+2025-11-23 22:38:18,914 - src.agents.orchestrator - INFO - Generated 10 structures from tools
+2025-11-23 22:38:18,914 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 22:38:18,914 - src.core.evaluator - INFO - Loading ORB model...
+2025-11-23 22:38:18,914 - src.core.evaluator - INFO - Loading ORB model: orb-v3 on cpu
+/home/ctong29/miniconda3/envs/matllm_agent/lib/python3.11/site-packages/orb_models/utils.py:30: UserWarning: Setting global torch default dtype to torch.float32.
+  warnings.warn(f"Setting global torch default dtype to {torch_dtype}.")
+2025-11-23 22:38:19,250 - cached_path - INFO - cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-20-mpa-20250404.ckpt is up-to-date
+2025-11-23 22:38:19,310 - src.core.evaluator - INFO - ORB-V3 loaded successfully on cpu
+2025-11-23 22:38:19,310 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 22:38:19,310 - src.agents.orchestrator - INFO -   Evaluating 1/10: Ba2SnO4 - New Wide-Bandgap Semiconductor
+2025-11-23 22:38:22,070 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:22,070 - src.agents.orchestrator - INFO -   Evaluating 2/10: Ga2GeF6
+2025-11-23 22:38:25,667 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:25,667 - src.agents.orchestrator - INFO -   Evaluating 3/10: Be2GeS4
+2025-11-23 22:38:27,090 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:27,090 - src.agents.orchestrator - INFO -   Evaluating 4/10: Be2SiP4
+2025-11-23 22:38:29,090 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:29,090 - src.agents.orchestrator - INFO -   Evaluating 5/10: Be2GeO4_0.5_Be2SiN4_0.5
+2025-11-23 22:38:31,189 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:31,190 - src.agents.orchestrator - INFO -   Evaluating 6/10: SrAlN2_0.7_K2ZnSiO4_0.3
+2025-11-23 22:38:32,092 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:32,092 - src.agents.orchestrator - INFO -   Evaluating 7/10: Be2GeO4
+2025-11-23 22:38:34,087 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:34,087 - src.agents.orchestrator - INFO -   Evaluating 8/10: Be2SiN4
+2025-11-23 22:38:36,706 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:36,706 - src.agents.orchestrator - INFO -   Evaluating 9/10: CaAlN2
+2025-11-23 22:38:37,401 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:37,401 - src.agents.orchestrator - INFO -   Evaluating 10/10: K2MgSiO4
+2025-11-23 22:38:40,029 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - Best Ed: -6.356 eV/atom
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - Diversity: 0.90
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 22:38:40,029 - src.agents.hypothesis_gen - INFO - Generating hypothesis for next iteration
+2025-11-23 22:38:40,029 - src.agents.hypothesis_gen - INFO - Thought: Achieved stable structures (best Ed = -6.252). Can optimize for additional properties.
+2025-11-23 22:38:40,029 - src.agents.hypothesis_gen - INFO - Action: Explore compositional substitutions for property enhancement
+2025-11-23 22:38:40,029 - src.agents.hypothesis_gen - INFO - Expected outcome: Expected to generate structures with improved stability based on Explore compositional substitutions for property enhancement
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO - New strategy generated:
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO -   Thought: Achieved stable structures (best Ed = -6.252). Can optimize for additional prope...
+2025-11-23 22:38:40,029 - src.agents.orchestrator - INFO -   Action: Explore compositional substitutions for property enhancement
+2025-11-23 22:38:40,029 - src.core.evolution - INFO - Selected 16 structures from 16 candidates
+2025-11-23 22:38:40,033 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_223704
+2025-11-23 22:38:40,033 - __main__ - INFO - 
+============================================================
+2025-11-23 22:38:40,033 - __main__ - INFO - ITERATION 3
+2025-11-23 22:38:40,033 - __main__ - INFO - ============================================================
+
+2025-11-23 22:38:40,033 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 3) ===
+2025-11-23 22:38:40,033 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 22:38:40,033 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 22:38:40,033 - src.agents.orchestrator - INFO - Generating 10 new structures...
+2025-11-23 22:38:40,033 - src.agents.orchestrator - INFO - Tool selection agent analyzing state...
+2025-11-23 22:38:40,033 - src.agents.tool_selector - INFO - Tool selector analyzing state and choosing tools...
+2025-11-23 22:38:40,033 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:38:41,084 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO - Selected 10 tool actions:
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 0, 'old_element': 'O', 'new_element': 'S'}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 1, 'old_element': 'N', 'new_element': 'P'}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - substitute: {'tool': 'substitute', 'parent': 2, 'old_element': 'Sr', 'new_element': 'Ca'}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - mutate: {'tool': 'mutate', 'parent': 0, 'strength': 0.1}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - mutate: {'tool': 'mutate', 'parent': 1, 'strength': 0.1}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - mix: {'tool': 'mix', 'parent1': 0, 'parent2': 1, 'ratio': 0.5}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - mix: {'tool': 'mix', 'parent1': 2, 'parent2': 3, 'ratio': 0.7}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - mix: {'tool': 'mix', 'parent1': 0, 'parent2': 3, 'ratio': 0.3}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - new: {'tool': 'new'}
+2025-11-23 22:38:41,089 - src.agents.tool_selector - INFO -   - new: {'tool': 'new'}
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO - Executing 10 tool actions...
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 1/10: substitute
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Substituting O → S in Be2GeO4
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 2/10: substitute
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Substituting N → P in Be2SiN4
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 3/10: substitute
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Substituting Sr → Ca in SrAlN2
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 4/10: mutate
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Mutating Be2GeO4 with strength=0.1
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 5/10: mutate
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Mutating Be2SiN4 with strength=0.1
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 6/10: mix
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Mixing Be2GeO4 × Be2SiN4 (ratio=0.50)
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 7/10: mix
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Mixing SrAlN2 × CaAlN2 (ratio=0.70)
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 8/10: mix
+2025-11-23 22:38:41,089 - src.core.operators - INFO - Mixing Be2GeO4 × CaAlN2 (ratio=0.30)
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -   Action 9/10: new
+2025-11-23 22:38:41,089 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:38:41,089 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:38:41,089 - src.agents.workers.structure_generator - INFO - Using strategy: REASONING:
+Achieved stable structures (best Ed = -6.252). Can optimize for additional properties.
+
+R...
+2025-11-23 22:38:41,089 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:38:43,769 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:43,769 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:38:43,769 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:38:43,769 - src.agents.orchestrator - INFO -   Action 10/10: new
+2025-11-23 22:38:43,769 - src.agents.orchestrator - INFO -     Calling LLM for fresh generation...
+2025-11-23 22:38:43,769 - src.agents.workers.structure_generator - INFO - Generating 1 new structures for: stable wide-bandgap semiconductors
+2025-11-23 22:38:43,769 - src.agents.workers.structure_generator - INFO - Using strategy: REASONING:
+Achieved stable structures (best Ed = -6.252). Can optimize for additional properties.
+
+R...
+2025-11-23 22:38:43,770 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 22:38:45,942 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:45,943 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 22:38:45,943 - src.utils.parser - INFO - Found 1 POSCAR blocks in response
+2025-11-23 22:38:45,943 - src.agents.orchestrator - INFO - Generated 10 structures from tools
+2025-11-23 22:38:45,943 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 22:38:45,943 - src.core.evaluator - INFO - Loading ORB model...
+2025-11-23 22:38:45,943 - src.core.evaluator - INFO - Loading ORB model: orb-v3 on cpu
+2025-11-23 22:38:46,263 - cached_path - INFO - cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-20-mpa-20250404.ckpt is up-to-date
+2025-11-23 22:38:46,329 - src.core.evaluator - INFO - ORB-V3 loaded successfully on cpu
+2025-11-23 22:38:46,329 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 22:38:46,329 - src.agents.orchestrator - INFO -   Evaluating 1/10: Be2GeS4
+2025-11-23 22:38:47,832 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:47,833 - src.agents.orchestrator - INFO -   Evaluating 2/10: Be2SiP4
+2025-11-23 22:38:50,362 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:50,362 - src.agents.orchestrator - INFO -   Evaluating 3/10: CaAlN2
+2025-11-23 22:38:50,826 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:50,826 - src.agents.orchestrator - INFO -   Evaluating 4/10: Be2GeO4
+2025-11-23 22:38:52,706 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:38:52,706 - src.agents.orchestrator - INFO -   Evaluating 5/10: Be2SiN4
+2025-11-23 22:39:00,220 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:39:00,220 - src.agents.orchestrator - INFO -   Evaluating 6/10: Be2GeO4_0.5_Be2SiN4_0.5
+2025-11-23 22:39:02,629 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:39:02,629 - src.agents.orchestrator - INFO -   Evaluating 7/10: SrAlN2_0.7_CaAlN2_0.3
+2025-11-23 22:39:02,651 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:39:02,651 - src.agents.orchestrator - INFO -   Evaluating 8/10: Be2GeO4_0.3_CaAlN2_0.7
+2025-11-23 22:39:03,812 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:39:03,812 - src.agents.orchestrator - INFO -   Evaluating 9/10: K2CdN2
+2025-11-23 22:39:03,845 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:39:03,845 - src.agents.orchestrator - INFO -   Evaluating 10/10: SrSiP2
+2025-11-23 22:39:04,583 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - Best Ed: -6.356 eV/atom
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - Diversity: 0.80
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 22:39:04,583 - src.agents.hypothesis_gen - INFO - Generating hypothesis for next iteration
+2025-11-23 22:39:04,583 - src.agents.hypothesis_gen - INFO - Thought: Achieved stable structures (best Ed = -6.252). Can optimize for additional properties.
+2025-11-23 22:39:04,583 - src.agents.hypothesis_gen - INFO - Action: Explore compositional substitutions for property enhancement
+2025-11-23 22:39:04,583 - src.agents.hypothesis_gen - INFO - Expected outcome: Expected to generate structures with improved stability based on Explore compositional substitutions for property enhancement
+2025-11-23 22:39:04,583 - src.agents.orchestrator - INFO - New strategy generated:
+2025-11-23 22:39:04,584 - src.agents.orchestrator - INFO -   Thought: Achieved stable structures (best Ed = -6.252). Can optimize for additional prope...
+2025-11-23 22:39:04,584 - src.agents.orchestrator - INFO -   Action: Explore compositional substitutions for property enhancement
+2025-11-23 22:39:04,584 - src.core.evolution - INFO - Selected 18 structures from 18 candidates
+2025-11-23 22:39:04,587 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_223704
+2025-11-23 22:39:04,587 - src.agents.orchestrator - INFO - Max iterations reached: 3 >= 3
+2025-11-23 22:39:04,588 - __main__ - INFO - 
+Termination condition met.
+2025-11-23 22:39:04,588 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:04,588 - __main__ - INFO - SEARCH COMPLETE
+2025-11-23 22:39:04,588 - __main__ - INFO - ============================================================
+2025-11-23 22:39:04,588 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:04,588 - __main__ - INFO - FILTERING KNOWN MATERIALS
+2025-11-23 22:39:04,588 - __main__ - INFO - ============================================================
+2025-11-23 22:39:04,589 - __main__ - INFO - Querying Materials Project database...
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 40721.40it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/12 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 12/12 [00:00<00:00, 488656.78it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 22:39:05,735 - __main__ - INFO -   Checking materials: 5/30
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 45590.26it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47127.01it/s]
+2025-11-23 22:39:07,153 - __main__ - INFO -   Checking materials: 10/30
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 22:39:07,955 - __main__ - INFO -   Checking materials: 15/30
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 22:39:08,505 - __main__ - INFO -   Checking materials: 20/30
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46603.38it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 22:39:09,182 - __main__ - INFO -   Checking materials: 25/30
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 22:39:09,707 - __main__ - INFO -   Checking materials: 30/30
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 22:39:09,953 - src.utils.material_database - INFO - Categorized 30 structures: 10 known, 20 novel
+2025-11-23 22:39:09,953 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:09,953 - __main__ - INFO - MATERIAL CATEGORIZATION RESULTS
+2025-11-23 22:39:09,953 - __main__ - INFO - ============================================================
+2025-11-23 22:39:09,953 - __main__ - INFO - Total structures: 30
+2025-11-23 22:39:09,953 - __main__ - INFO - Known materials: 10 (33.3%)
+2025-11-23 22:39:09,953 - __main__ - INFO - Novel materials: 20 (66.7%)
+2025-11-23 22:39:09,953 - __main__ - INFO - 
+Known materials found
+2025-11-23 22:39:09,953 - __main__ - INFO -   - Be2GeO4: Ed = -6.356 eV/atom
+2025-11-23 22:39:09,953 - __main__ - INFO -   - Be2GeO4: Ed = -6.356 eV/atom
+2025-11-23 22:39:09,953 - __main__ - INFO -   - Be2GeO4: Ed = -6.294 eV/atom
+2025-11-23 22:39:09,953 - __main__ - INFO -   - Be2GeO4: Ed = -6.271 eV/atom
+2025-11-23 22:39:09,953 - __main__ - INFO -   - Be2GeO4: Ed = -6.252 eV/atom
+2025-11-23 22:39:09,953 - __main__ - INFO -   - Be2GeO4: Ed = -6.242 eV/atom
+2025-11-23 22:39:09,953 - __main__ - INFO -   - K2MgSiO4: Ed = -4.941 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - K2ZnSiO4: Ed = -4.596 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Zn(GaS2)2: Ed = -3.554 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - LiAlS2: Ed = -2.804 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO - 
+Novel materials found
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2SiN4: Ed = -6.341 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2SiN4: Ed = -6.184 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2SiN4: Ed = -6.180 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - SrAlN2: Ed = -5.188 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - SrAlN2: Ed = -5.188 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - CaAlN2: Ed = -5.163 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - CaAlN2: Ed = -5.163 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Ba2SnO2: Ed = -5.131 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - SrAlN2: Ed = -5.057 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2SiP4: Ed = -4.763 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2SiP4: Ed = -4.763 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2GeS4: Ed = -4.583 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Be2GeS4: Ed = -4.583 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Ga2GeF6: Ed = -4.480 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - SrSiP2: Ed = -4.354 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - AlBN: Ed = -4.114 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - LiGaN2: Ed = -3.931 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - Li2ZnN2: Ed = -3.500 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - K2CdN2: Ed = -1.801 eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO -   - ZnMgF2 - Ternary Fluorite Structure: Ed = inf eV/atom
+2025-11-23 22:39:09,954 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:09,954 - __main__ - INFO - SAVING RESULTS
+2025-11-23 22:39:09,954 - __main__ - INFO - ============================================================
+2025-11-23 22:39:09,954 - __main__ - INFO - Saving 20 novel structures...
+2025-11-23 22:39:09,956 - __main__ - INFO - Saving 10 known structures...
+2025-11-23 22:39:09,957 - __main__ - INFO - Saving all 30 structures...
+2025-11-23 22:39:09,960 - __main__ - INFO - 
+Saving 30 structures to data/results/run_20251123_223704
+2025-11-23 22:39:09,963 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:09,963 - __main__ - INFO - GENERATING VISUALIZATIONS
+2025-11-23 22:39:09,963 - __main__ - INFO - ============================================================
+2025-11-23 22:39:09,963 - __main__ - INFO - Creating energy distribution for novel materials...
+2025-11-23 22:39:10,148 - __main__ - INFO - Creating energy distribution for all materials...
+2025-11-23 22:39:10,310 - __main__ - INFO - Creating convergence plot...
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - FINAL STATISTICS - ALL STRUCTURES
+2025-11-23 22:39:10,587 - __main__ - INFO - ============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - Total generated: 30
+2025-11-23 22:39:10,587 - __main__ - INFO - Valid: 29 (96.7%)
+2025-11-23 22:39:10,587 - __main__ - INFO - Metastable: 29 (96.7%)
+2025-11-23 22:39:10,587 - __main__ - INFO - Stable: 29 (96.7%)
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - FINAL STATISTICS - NOVEL MATERIALS ONLY
+2025-11-23 22:39:10,587 - __main__ - INFO - ============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - Novel structures: 20
+2025-11-23 22:39:10,587 - __main__ - INFO - Novel valid: 19 (95.0%)
+2025-11-23 22:39:10,587 - __main__ - INFO - Novel stable: 19 (95.0%)
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+🌟 BEST NOVEL STRUCTURE:
+2025-11-23 22:39:10,587 - __main__ - INFO -    Formula: Be2SiN4
+2025-11-23 22:39:10,587 - __main__ - INFO -    Decomposition energy: -6.341 eV/atom
+2025-11-23 22:39:10,587 - __main__ - INFO -    This material is NOT in Materials Project database!
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - RESULTS SUMMARY
+2025-11-23 22:39:10,587 - __main__ - INFO - ============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - Output directory: data/results/run_20251123_223704
+2025-11-23 22:39:10,587 - __main__ - INFO -   - novel_*.json: 20 novel materials
+2025-11-23 22:39:10,587 - __main__ - INFO -   - known_*.json: 10 known materials
+2025-11-23 22:39:10,587 - __main__ - INFO -   - all_*.json: 30 total materials
+2025-11-23 22:39:10,587 - __main__ - INFO -   - *.png: Visualization plots
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - FINAL STATISTICS
+2025-11-23 22:39:10,587 - __main__ - INFO - ============================================================
+2025-11-23 22:39:10,587 - __main__ - INFO - Total generated: 30
+2025-11-23 22:39:10,587 - __main__ - INFO - Valid: 29 (96.7%)
+2025-11-23 22:39:10,587 - __main__ - INFO - Metastable: 29 (96.7%)
+2025-11-23 22:39:10,587 - __main__ - INFO - Stable: 29 (96.7%)
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+Best structure: Be2GeO4
+2025-11-23 22:39:10,587 - __main__ - INFO - Decomposition energy: -6.356 eV/atom
+2025-11-23 22:39:10,587 - __main__ - INFO - 
+Results saved to: data/results/run_20251123_223704
+Saved plot to data/results/run_20251123_223704/energy_distribution_novel.png
+Saved plot to data/results/run_20251123_223704/energy_distribution_all.png
+Saved plot to data/results/run_20251123_223704/convergence.png

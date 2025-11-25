@@ -1,0 +1,92 @@
+{
+  "formula": "KLi4GeO4",
+  "lattice": [
+    [
+      6.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.3
+    ]
+  ],
+  "positions": [
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN,
+      NaN
+    ]
+  ],
+  "species": [
+    "K",
+    "Li",
+    "Li",
+    "Li",
+    "Li",
+    "Ge",
+    "O",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -0.14587542414665222,
+  "decomposition_energy": -0.14587542414665222,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {
+    "relaxation_steps": 1
+  }
+}

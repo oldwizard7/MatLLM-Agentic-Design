@@ -1,0 +1,54 @@
+{
+  "formula": "SrZnO2 - Tetragonal Structure",
+  "lattice": [
+    [
+      5.12,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.12,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.34
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.25,
+      0.75,
+      0.25
+    ],
+    [
+      0.75,
+      0.25,
+      0.75
+    ]
+  ],
+  "species": [
+    "Sr",
+    "Zn",
+    "O",
+    "O"
+  ],
+  "energy": -0.9000481367111206,
+  "decomposition_energy": -0.9000481367111206,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

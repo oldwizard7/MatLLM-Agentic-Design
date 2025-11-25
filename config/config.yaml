@@ -1,0 +1,57 @@
+# MatLLMSearch Configuration
+
+# Evolution parameters
+evolution:
+  population_size: 5      # K: number of groups
+  parent_size: 4            # P: parents per group
+  children_size: 10         # C: children per reproduction (2→5，每轮生成更多)
+  max_iterations: 3       # N: total iterations (2→10，跑更多轮)
+  
+# Optimization objective 也是一个终止条件
+objective:
+  type: "stability"         # Options: stability, bulk_modulus, multi_objective
+  description: "stable wide-bandgap semiconductors"
+  target_ed: -10.0            # Target decomposition energy (eV/atom)
+  band_gap: 2.5
+  formation_energy: -1.0
+  weights:
+    stability: 0.7
+    property: 0.3
+
+# LLM configuration
+llm:
+  provider: "openai"        # Options: openai, anthropic
+  model: "gpt-4o"           # or "claude-3-opus-20240229"
+  temperature: 0.85    #这是一个随机性的重要来源
+  max_tokens: 4096
+  api_key_env: "OPENAI_API_KEY"  # Environment variable for API key
+
+# MLIP evaluator
+evaluator:
+  backend: "orb"            # Options: chgnet, m3gnet, orb
+  model_name: "orb-v3"      # For ORB: orb-v1, orb-v2, orb-v3
+  relax:
+    fmax: 0.1               # Force convergence (eV/Å)
+    steps: 500
+    optimizer: "FIRE"
+  energy_cutoff: 0.1        # Metastability threshold (eV/atom)
+
+# Structure validation
+validation:
+  min_distance_factor: 0.6  # Minimum interatomic distance
+  max_distance_factor: 1.3  # Maximum interatomic distance
+  check_charge_balance: true
+  symmetry_tolerance: 0.1
+
+# Data paths
+data:
+  database: "data/matbench/"
+  initial_structures: "data/initial_structures/"
+  output_dir: "data/results/"
+  cache_dir: "data/cache/"
+
+# Logging
+logging:
+  level: "INFO"             # DEBUG, INFO, WARNING, ERROR
+  save_structures: true
+  save_frequency: 1         # Save every N iterations

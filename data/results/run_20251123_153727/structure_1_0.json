@@ -1,0 +1,60 @@
+{
+  "formula": "SrTiO3 - Perovskite Structure",
+  "lattice": [
+    [
+      5.44,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.44,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.44
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Sr",
+    "Ti",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -1.078981876373291,
+  "decomposition_energy": -1.078981876373291,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

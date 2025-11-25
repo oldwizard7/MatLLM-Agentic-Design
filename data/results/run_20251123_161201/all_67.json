@@ -1,0 +1,54 @@
+{
+  "formula": "MgZrN2 - Tetragonal Structure",
+  "lattice": [
+    [
+      4.05,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.05,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      8.2
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ],
+    [
+      0.5,
+      0.0,
+      0.75
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Mg",
+    "N",
+    "N",
+    "Zr"
+  ],
+  "energy": -1.3088171482086182,
+  "decomposition_energy": -1.3088171482086182,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

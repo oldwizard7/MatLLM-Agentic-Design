@@ -1,0 +1,54 @@
+{
+  "formula": "BaMgSe2 - Trigonal Structure",
+  "lattice": [
+    [
+      6.73,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.73,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.32
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.333,
+      0.333,
+      0.667
+    ],
+    [
+      0.667,
+      0.667,
+      0.333
+    ]
+  ],
+  "species": [
+    "Ba",
+    "Mg",
+    "Se",
+    "Se"
+  ],
+  "energy": -0.1350231170654297,
+  "decomposition_energy": -0.1350231170654297,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

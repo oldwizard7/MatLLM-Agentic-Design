@@ -1,0 +1,54 @@
+{
+  "formula": "MgZnO2 - Cubic Structure",
+  "lattice": [
+    [
+      5.1,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.1,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.1
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.25,
+      0.25
+    ],
+    [
+      0.75,
+      0.75,
+      0.75
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "species": [
+    "Mg",
+    "O",
+    "O",
+    "Zn"
+  ],
+  "energy": -0.9134253263473511,
+  "decomposition_energy": -0.9134253263473511,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

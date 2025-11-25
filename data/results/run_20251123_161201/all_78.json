@@ -1,0 +1,54 @@
+{
+  "formula": "BNiO2 - Orthorhombic Structure",
+  "lattice": [
+    [
+      5.1,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.7,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.2
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.25,
+      0.25
+    ],
+    [
+      0.75,
+      0.75,
+      0.75
+    ]
+  ],
+  "species": [
+    "B",
+    "Ni",
+    "O",
+    "O"
+  ],
+  "energy": -1.007014513015747,
+  "decomposition_energy": -1.007014513015747,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

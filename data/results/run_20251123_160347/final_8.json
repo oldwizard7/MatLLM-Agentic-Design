@@ -1,0 +1,60 @@
+{
+  "formula": "NdGaO3 - Perovskite Structure",
+  "lattice": [
+    [
+      3.84,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      3.84,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.84
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Nd",
+    "Ga",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -1.0301977396011353,
+  "decomposition_energy": -1.0301977396011353,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

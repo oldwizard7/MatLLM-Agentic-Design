@@ -1,0 +1,54 @@
+{
+  "formula": "LiBeN2 - Ternary Nitride Structure",
+  "lattice": [
+    [
+      5.23,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.23,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.47
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.333,
+      0.333,
+      0.333
+    ],
+    [
+      0.666,
+      0.666,
+      0.666
+    ]
+  ],
+  "species": [
+    "Li",
+    "Be",
+    "N",
+    "N"
+  ],
+  "energy": -0.9537138342857361,
+  "decomposition_energy": -0.9537138342857361,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

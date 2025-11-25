@@ -1,0 +1,60 @@
+{
+  "formula": "NaTiO3 - Perovskite Structure",
+  "lattice": [
+    [
+      3.9,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      3.9,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.9
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ]
+  ],
+  "species": [
+    "Na",
+    "O",
+    "O",
+    "O",
+    "Ti"
+  ],
+  "energy": 1.0440294742584229,
+  "decomposition_energy": 1.0440294742584229,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

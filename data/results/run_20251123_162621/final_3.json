@@ -1,0 +1,44 @@
+{
+  "formula": "BN",
+  "lattice": [
+    [
+      2.504,
+      0.0,
+      0.0
+    ],
+    [
+      -1.252,
+      2.17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.66
+    ]
+  ],
+  "positions": [
+    [
+      0.333,
+      0.333,
+      0.0
+    ],
+    [
+      0.667,
+      0.667,
+      0.5
+    ]
+  ],
+  "species": [
+    "B",
+    "N"
+  ],
+  "energy": -1.800935983657837,
+  "decomposition_energy": -1.800935983657837,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {
+    "relaxation_steps": 0
+  }
+}

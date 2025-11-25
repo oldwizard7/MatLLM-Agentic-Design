@@ -1,0 +1,54 @@
+{
+  "formula": "SrGaN2 - Tetragonal Structure",
+  "lattice": [
+    [
+      6.2,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.2,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.8
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.25,
+      0.25
+    ],
+    [
+      0.75,
+      0.75,
+      0.75
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "species": [
+    "Ga",
+    "N",
+    "N",
+    "Sr"
+  ],
+  "energy": -0.7422066330909729,
+  "decomposition_energy": -0.7422066330909729,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

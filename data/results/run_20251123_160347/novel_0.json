@@ -1,0 +1,60 @@
+{
+  "formula": "LiZrO3 - Perovskite Structure",
+  "lattice": [
+    [
+      3.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      3.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.5
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Li",
+    "O",
+    "O",
+    "O",
+    "Zr"
+  ],
+  "energy": -1.1321017742156982,
+  "decomposition_energy": -1.1321017742156982,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

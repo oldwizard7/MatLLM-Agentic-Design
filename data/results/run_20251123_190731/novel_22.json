@@ -1,0 +1,57 @@
+{
+  "formula": "BeGaN2",
+  "lattice": [
+    [
+      4.8,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.8,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.0
+    ]
+  ],
+  "positions": [
+    [
+      0.25,
+      0.25,
+      0.0
+    ],
+    [
+      0.75,
+      0.75,
+      0.0
+    ],
+    [
+      0.25,
+      0.75,
+      0.5
+    ],
+    [
+      0.75,
+      0.25,
+      0.5
+    ]
+  ],
+  "species": [
+    "Be",
+    "Ga",
+    "N",
+    "N"
+  ],
+  "energy": -2.350461006164551,
+  "decomposition_energy": -2.350461006164551,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {
+    "relaxation_steps": 0,
+    "backend": "orb"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "formula": "CsNbN3 - Hexagonal Nitrate Structure",
+  "lattice": [
+    [
+      5.94,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.94,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      8.53
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.333,
+      0.333,
+      0.333
+    ],
+    [
+      0.666,
+      0.666,
+      0.666
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Cs",
+    "Nb",
+    "N",
+    "N",
+    "N"
+  ],
+  "energy": -1.055544137954712,
+  "decomposition_energy": -1.055544137954712,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

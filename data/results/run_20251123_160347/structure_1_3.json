@@ -1,0 +1,60 @@
+{
+  "formula": "BaSiO3 - Perovskite Structure",
+  "lattice": [
+    [
+      4.8,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.8,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.8
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Ba",
+    "O",
+    "O",
+    "O",
+    "Si"
+  ],
+  "energy": -1.1208012104034424,
+  "decomposition_energy": -1.1208012104034424,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

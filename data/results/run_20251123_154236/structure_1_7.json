@@ -1,0 +1,60 @@
+{
+  "formula": "BaZnO3 - Perovskite Structure",
+  "lattice": [
+    [
+      4.15,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.15,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.15
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ]
+  ],
+  "species": [
+    "Ba",
+    "O",
+    "O",
+    "O",
+    "Zn"
+  ],
+  "energy": 1.1540095806121826,
+  "decomposition_energy": 1.1540095806121826,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

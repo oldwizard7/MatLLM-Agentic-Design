@@ -1,0 +1,54 @@
+{
+  "formula": "ZnSnP2 - Chalcopyrite Structure",
+  "lattice": [
+    [
+      6.2,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.2,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.2
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ]
+  ],
+  "species": [
+    "Zn",
+    "Sn",
+    "P",
+    "P"
+  ],
+  "energy": -0.3951941132545471,
+  "decomposition_energy": -0.3951941132545471,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

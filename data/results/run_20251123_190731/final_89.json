@@ -1,0 +1,60 @@
+{
+  "formula": "YSnO3",
+  "lattice": [
+    [
+      5.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.0
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.75,
+      0.25
+    ],
+    [
+      0.75,
+      0.25,
+      0.75
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Y",
+    "Sn",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": null,
+  "decomposition_energy": null,
+  "properties": {},
+  "is_valid": false,
+  "is_relaxed": false,
+  "metadata": {}
+}

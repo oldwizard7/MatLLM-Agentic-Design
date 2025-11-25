@@ -1,0 +1,48 @@
+{
+  "formula": "BeTeN - Ternary Cubic Structure",
+  "lattice": [
+    [
+      4.32,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.32,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.32
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ]
+  ],
+  "species": [
+    "Be",
+    "Te",
+    "N"
+  ],
+  "energy": -1.1085476875305176,
+  "decomposition_energy": -1.1085476875305176,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

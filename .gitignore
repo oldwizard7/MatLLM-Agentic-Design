@@ -1,0 +1,17 @@
+.env
+
+# Virtual environments
+env_ai4mat/
+venv/
+.venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Experimental outputs (optional - uncomment if don't want to commit)
+# data/results/
+# outputs*/

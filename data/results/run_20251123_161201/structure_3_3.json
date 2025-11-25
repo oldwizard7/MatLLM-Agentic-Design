@@ -1,0 +1,60 @@
+{
+  "formula": "KZrO3 - Cubic Perovskite Structure",
+  "lattice": [
+    [
+      5.2,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.2,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.2
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.5
+    ]
+  ],
+  "species": [
+    "K",
+    "Zr",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -1.2717598676681519,
+  "decomposition_energy": -1.2717598676681519,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

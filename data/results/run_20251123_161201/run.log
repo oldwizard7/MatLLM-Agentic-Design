@@ -1,0 +1,1063 @@
+2025-11-23 16:12:05,745 - __main__ - INFO - Loading configuration from config/config.yaml
+2025-11-23 16:12:05,748 - __main__ - INFO - Initializing Orchestrator Agent...
+2025-11-23 16:12:05,778 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:12:05,806 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:12:05,811 - __main__ - INFO - Loading initial structures from data/reference_examples/
+2025-11-23 16:12:05,811 - src.agents.orchestrator - INFO - Initializing search...
+2025-11-23 16:12:05,811 - src.agents.orchestrator - INFO - Loading reference examples from data/reference_examples/
+2025-11-23 16:12:05,812 - src.utils.data_manager - INFO - Loaded 3 structures from data/reference_examples/
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO - Loaded 3 reference examples:
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO -   - CaTiO3 - Perovskite Structure
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO -   - SiO2 - Quartz Structure
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO -   - NaCl - Rock Salt Structure
+2025-11-23 16:12:05,812 - src.agents.workers.structure_generator - INFO - Set 3 reference examples for format
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO - Initialization complete. Ready to generate structures.
+2025-11-23 16:12:05,812 - __main__ - INFO - 
+============================================================
+2025-11-23 16:12:05,812 - __main__ - INFO - Starting MatLLMSearch ACE Loop
+2025-11-23 16:12:05,812 - __main__ - INFO - ============================================================
+
+2025-11-23 16:12:05,812 - __main__ - INFO - 
+============================================================
+2025-11-23 16:12:05,812 - __main__ - INFO - ITERATION 1
+2025-11-23 16:12:05,812 - __main__ - INFO - ============================================================
+
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 1) ===
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:12:05,812 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:12:05,812 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:12:05,812 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:12:23,424 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:12:23,430 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:12:23,430 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:12:23,430 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:12:23,430 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:12:23,430 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:12:23,430 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:12:23,454 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:12:23,454 - src.agents.orchestrator - INFO -   Evaluating 1/10: Mg2AlP4 - Tetrahedral Structure
+2025-11-23 16:12:23,455 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+/home/ctong29/miniconda3/envs/matllm_agent/lib/python3.11/site-packages/chgnet/model/model.py:898: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  volumes = torch.tensor(volumes, dtype=TORCH_DTYPE, device=atomic_numbers.device)
+2025-11-23 16:12:23,590 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,591 - src.agents.orchestrator - INFO -   Evaluating 2/10: LiAgS2 - Layered Structure
+2025-11-23 16:12:23,591 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,605 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,606 - src.agents.orchestrator - INFO -   Evaluating 3/10: ZnGaN3 - Hexagonal Structure
+2025-11-23 16:12:23,606 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,623 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,623 - src.agents.orchestrator - INFO -   Evaluating 4/10: BaSnO2Br - Layered Orthorhombic Structure
+2025-11-23 16:12:23,623 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,641 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,641 - src.agents.orchestrator - INFO -   Evaluating 5/10: KInSe2 - Chalcopyrite Structure
+2025-11-23 16:12:23,641 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,655 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,655 - src.agents.orchestrator - INFO -   Evaluating 6/10: BeTeN - Ternary Cubic Structure
+2025-11-23 16:12:23,655 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,665 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,665 - src.agents.orchestrator - INFO -   Evaluating 7/10: CaNiF4 - Layered Perovskite Structure
+2025-11-23 16:12:23,665 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,684 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,684 - src.agents.orchestrator - INFO -   Evaluating 8/10: SrMnN - Ternary Hexagonal Structure
+2025-11-23 16:12:23,684 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,700 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,700 - src.agents.orchestrator - INFO -   Evaluating 9/10: Al2Ga2O5 - Orthorhombic Structure
+2025-11-23 16:12:23,700 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,739 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,740 - src.agents.orchestrator - INFO -   Evaluating 10/10: YbCuCl2 - Hexagonal Layered Structure
+2025-11-23 16:12:23,740 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:23,748 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - Best Ed: -1.820 eV/atom
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:12:23,748 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:12:28,780 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:12:28,789 - src.agents.orchestrator - INFO - New plan: The given crystal structure search results indicate that all generated structures in the first iteration are valid, metastable, and stable, with a high level of structural diversity. While these results are promising, there is room for improvement in terms of energy optimization and exploring new structural possibilities. Here are a few strategies to consider for the next iteration:
+
+1. **Increase Exploration Space**: 
+   - Expand the search space by incorporating a wider variety of initial atomic configurations or compositions. This can be achieved by using different initial seeds or introducing new elements into the system to explore more diverse structural possibilities.
+   - Implement advanced sampling techniques such as genetic algorithms or machine learning-driven searches to explore the configuration space more thoroughly and potentially discover new low-energy structures.
+
+2. **Optimize Energy Calculations**:
+   - Fine-tune the computational methods used for energy calculations, such as increasing the accuracy of the energy function or using more precise exchange-correlation functions if density functional theory (DFT) is employed. This can lead to more accurate assessments of the decomposition energy.
+   - Introduce more rigorous convergence criteria in the calculations to ensure that the energies of the structures are minimized as much as possible.
+
+3. **Enhance Selection Criteria**:
+   - Implement multi-objective optimization to balance between energy minimization and other factors like volume, magnetism, or mechanical properties, which might lead to discovering structures with desirable properties beyond just low decomposition energy.
+   - Use clustering algorithms to identify and focus on underexplored regions of the structural space that could harbor promising low-energy configurations.
+
+By incorporating these strategies, you can potentially enhance the discovery of novel crystal structures with improved stability and desired properties in subsequent iterations.
+2025-11-23 16:12:28,789 - src.core.evolution - INFO - Selected 10 structures from 10 candidates
+2025-11-23 16:12:28,791 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:12:28,791 - __main__ - INFO - 
+============================================================
+2025-11-23 16:12:28,791 - __main__ - INFO - ITERATION 2
+2025-11-23 16:12:28,791 - __main__ - INFO - ============================================================
+
+2025-11-23 16:12:28,791 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 2) ===
+2025-11-23 16:12:28,791 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:12:28,791 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:12:28,791 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:12:28,791 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:12:28,792 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:12:41,314 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:12:41,315 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:12:41,315 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:12:41,315 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:12:41,315 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:12:41,315 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:12:41,315 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:12:41,337 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:12:41,337 - src.agents.orchestrator - INFO -   Evaluating 1/10: SrZrO3
+2025-11-23 16:12:41,337 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,380 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,380 - src.agents.orchestrator - INFO -   Evaluating 2/10: BaSnN2
+2025-11-23 16:12:41,380 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,397 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,397 - src.agents.orchestrator - INFO -   Evaluating 3/10: LiMgF3
+2025-11-23 16:12:41,398 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,451 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,451 - src.agents.orchestrator - INFO -   Evaluating 4/10: BeAlP2
+2025-11-23 16:12:41,451 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,471 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,471 - src.agents.orchestrator - INFO -   Evaluating 5/10: ZnBN2
+2025-11-23 16:12:41,471 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,487 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,487 - src.agents.orchestrator - INFO -   Evaluating 6/10: KScO2
+2025-11-23 16:12:41,487 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,501 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,502 - src.agents.orchestrator - INFO -   Evaluating 7/10: Yb2SiS3
+2025-11-23 16:12:41,502 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,517 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,517 - src.agents.orchestrator - INFO -   Evaluating 8/10: CsAlSe3
+2025-11-23 16:12:41,518 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,526 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,526 - src.agents.orchestrator - INFO -   Evaluating 9/10: RbZnTe2
+2025-11-23 16:12:41,526 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,540 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,540 - src.agents.orchestrator - INFO -   Evaluating 10/10: Ga2SiO4
+2025-11-23 16:12:41,540 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:12:41,550 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:12:41,550 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:12:41,550 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:12:41,550 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:12:41,550 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:12:41,551 - src.agents.orchestrator - INFO - Best Ed: -1.714 eV/atom
+2025-11-23 16:12:41,551 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:12:41,551 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:12:45,125 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:12:45,129 - src.agents.orchestrator - INFO - New plan: The results from the crystal structure search indicate that all generated structures in both iterations were valid and metastable, with stable structures also being generated consistently. However, there is room for improvement in terms of achieving lower decomposition energies and possibly enhancing structural diversity. Here are a few strategies to consider for improving the next iteration:
+
+1. **Explore Different Chemical Compositions:**
+   - Given the consistent structural validity and stability, diversifying the chemical compositions used in the search could potentially lead to structures with even lower decomposition energies. Experiment with varying the elemental makeup or introducing new elements that might stabilize the structure further.
+
+2. **Adjust Structural Parameters:**
+   - Refine the search parameters such as lattice constants, symmetry constraints, or atomic positions. This can help in exploring a broader range of configurations, potentially uncovering more energetically favorable structures. Consider implementing a more sophisticated algorithm for parameter optimization, such as genetic algorithms or machine learning techniques, to guide the search process.
+
+3. **Enhance Sampling Techniques:**
+   - Increase the diversity of the generated structures by employing advanced sampling techniques like random structure searches, evolutionary algorithms, or neural network-driven methods. This might help discover novel structures with lower energies that were previously unexplored due to the constraints of the search space.
+
+These strategies aim to not only improve the energy outcomes of the generated structures but also maintain or enhance the diversity and novelty of the search results in subsequent iterations.
+2025-11-23 16:12:45,129 - src.core.evolution - INFO - Selected 20 structures from 20 candidates
+2025-11-23 16:12:45,132 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:12:45,132 - __main__ - INFO - 
+============================================================
+2025-11-23 16:12:45,132 - __main__ - INFO - ITERATION 3
+2025-11-23 16:12:45,132 - __main__ - INFO - ============================================================
+
+2025-11-23 16:12:45,132 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 3) ===
+2025-11-23 16:12:45,132 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:12:45,132 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:12:45,132 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:12:45,132 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:12:45,132 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:13:03,055 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:13:03,056 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:13:03,056 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:13:03,056 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:13:03,056 - src.utils.parser - WARNING - Failed to parse POSCAR block 2: list index out of range
+2025-11-23 16:13:03,056 - src.utils.parser - WARNING - Failed to parse POSCAR block 8: list index out of range
+2025-11-23 16:13:03,056 - src.utils.parser - WARNING - Failed to parse POSCAR block 9: list index out of range
+2025-11-23 16:13:03,056 - src.agents.orchestrator - INFO - Parsed 7 structures
+2025-11-23 16:13:03,056 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:13:03,056 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:13:03,078 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:13:03,078 - src.agents.orchestrator - INFO -   Evaluating 1/7: LiBeO2 - Layered Tetrahedral Structure
+2025-11-23 16:13:03,078 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,091 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,091 - src.agents.orchestrator - INFO -   Evaluating 2/7: MgGa2S4 - Chalcopyrite Structure
+2025-11-23 16:13:03,091 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,109 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,109 - src.agents.orchestrator - INFO -   Evaluating 3/7: SrSiN2 - Orthorhombic Structure
+2025-11-23 16:13:03,109 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,123 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,124 - src.agents.orchestrator - INFO -   Evaluating 4/7: BaIn2O5 - Layered Hexagonal Structure
+2025-11-23 16:13:03,124 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,144 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,144 - src.agents.orchestrator - INFO -   Evaluating 5/7: ZnSnP2 - Chalcopyrite Structure
+2025-11-23 16:13:03,144 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,153 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,153 - src.agents.orchestrator - INFO -   Evaluating 6/7: Y2GeO5 - Orthorhombic Structure
+2025-11-23 16:13:03,153 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,162 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,162 - src.agents.orchestrator - INFO -   Evaluating 7/7: KZrO3 - Cubic Perovskite Structure
+2025-11-23 16:13:03,162 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:03,180 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - Generated 7 structures in this iteration
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - Best Ed: -1.272 eV/atom
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:13:03,180 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:13:07,478 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:13:07,485 - src.agents.orchestrator - INFO - New plan: Analyzing the provided crystal structure search results and their recent history, we can identify a few key points and suggest strategies to improve future iterations:
+
+1. **Increase Diversity of Generated Structures**:
+   - **Observation**: The structural diversity score remains constant at 1.0, suggesting that the generated structures might be too similar across iterations.
+   - **Strategy**: Introduce more variation in the generation process, possibly by varying initial conditions, using different generation algorithms, or tweaking parameters that influence structural geometry. This could lead to discovering new structures with potentially lower decomposition energies.
+
+2. **Enhance Search Space Exploration**:
+   - **Observation**: There is a decrease in the best decomposition energy and average decomposition energy across iterations, which might indicate that the search space is not being effectively explored or is converging to a local minimum.
+   - **Strategy**: Expand the search space by increasing the number of generated structures per iteration or by implementing techniques such as genetic algorithms or machine learning models that can better explore the potential energy landscape. This can help in identifying more energetically favorable configurations.
+
+3. **Focus on Improving Metastability**:
+   - **Observation**: While the metastable rate is consistently 100%, the energies are not improving, which suggests that the structures are not moving towards more stable configurations.
+   - **Strategy**: Implement post-processing techniques such as local optimization or annealing processes to refine the structures further and potentially reduce their energy. Additionally, consider incorporating domain knowledge or constraints that favor stability, such as symmetry or specific bonding patterns, into the generation process.
+
+By applying these strategies, the subsequent iterations can potentially yield better outcomes in terms of discovering more stable and diverse crystal structures.
+2025-11-23 16:13:07,485 - src.core.evolution - INFO - Selected 20 structures from 27 candidates
+2025-11-23 16:13:07,488 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:13:07,488 - __main__ - INFO - 
+============================================================
+2025-11-23 16:13:07,488 - __main__ - INFO - ITERATION 4
+2025-11-23 16:13:07,488 - __main__ - INFO - ============================================================
+
+2025-11-23 16:13:07,488 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 4) ===
+2025-11-23 16:13:07,488 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:13:07,488 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:13:07,488 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:13:07,488 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:13:07,488 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:13:19,803 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:13:19,807 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:13:19,807 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:13:19,807 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:13:19,807 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:13:19,808 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:13:19,808 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:13:19,829 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:13:19,829 - src.agents.orchestrator - INFO -   Evaluating 1/10: LiBeN2 - Ternary Nitride Structure
+2025-11-23 16:13:19,830 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,842 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,843 - src.agents.orchestrator - INFO -   Evaluating 2/10: MgSiO3 - Orthorhombic Silicate Structure
+2025-11-23 16:13:19,843 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,859 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,859 - src.agents.orchestrator - INFO -   Evaluating 3/10: KAlO2 - Layered Structure
+2025-11-23 16:13:19,859 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,888 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,888 - src.agents.orchestrator - INFO -   Evaluating 4/10: SrGa2S4 - Tetrahedral Sulfide Structure
+2025-11-23 16:13:19,888 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,900 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,900 - src.agents.orchestrator - INFO -   Evaluating 5/10: RbInP2 - Phosphide Structure
+2025-11-23 16:13:19,900 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,913 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,914 - src.agents.orchestrator - INFO -   Evaluating 6/10: CaZnTe2 - Chalcopyrite Structure
+2025-11-23 16:13:19,914 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,930 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,930 - src.agents.orchestrator - INFO -   Evaluating 7/10: BaGeO3 - Perovskite-like Structure
+2025-11-23 16:13:19,930 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,948 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,948 - src.agents.orchestrator - INFO -   Evaluating 8/10: YAlO3 - Orthorhombic Perovskite
+2025-11-23 16:13:19,948 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,963 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,963 - src.agents.orchestrator - INFO -   Evaluating 9/10: CsNbN3 - Hexagonal Nitrate Structure
+2025-11-23 16:13:19,963 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,978 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,978 - src.agents.orchestrator - INFO -   Evaluating 10/10: ZnGaAs2 - Ternary Arsenide Structure
+2025-11-23 16:13:19,978 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:19,993 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - Best Ed: -1.056 eV/atom
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:13:19,993 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:13:27,009 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:13:27,010 - src.agents.orchestrator - INFO - New plan: Analyzing the crystal structure search results from iterations 2 to 4, we can observe a few key patterns and areas for potential improvement. Here are some specific strategies to enhance the next iteration:
+
+1. **Increase Exploration of Structural Space**:
+   - **Diversification Techniques**: Although the structural diversity is consistently at 1.0, the decomposition energies (both best and average) have shown a decreasing trend in stability from iteration 2 to 4. To counteract this, consider incorporating techniques that encourage exploration of less-sampled structural spaces, such as introducing random perturbations to existing structures or utilizing genetic algorithms to combine features of the most stable structures.
+   - **Algorithm Tuning**: Adjust parameters in your search algorithm to more aggressively explore new areas of the structural space. This could involve tweaking mutation rates, crossover rates, or other parameters in evolutionary algorithms.
+
+2. **Refinement of Metastable Candidates**:
+   - **Focused Optimization**: Since all generated structures are valid and metastable, focus on refining these metastable candidates to improve their stability. Implement local optimization techniques, such as gradient descent or other minimization algorithms, to fine-tune promising structures and reduce their decomposition energies further.
+   - **Use of Machine Learning Models**: Implement ML models to predict promising regions of the structural space based on previous iterations' data. This can guide the search process to focus on areas most likely to yield stable structures.
+
+3. **Enhanced Screening Criteria**:
+   - **Dynamic Screening Thresholds**: Adjust the screening criteria dynamically based on the results of each iteration. For example, if the best decomposition energy is worsening, consider tightening the criteria for what constitutes a "best" structure to maintain or improve quality.
+   - **Multi-objective Optimization**: Consider incorporating additional objectives such as mechanical properties or electronic properties alongside decomposition energy to identify structures that might be more stable or desirable in practical applications.
+
+By implementing these strategies, you can enhance both the exploration and exploitation aspects of the search process, potentially leading to the discovery of more stable and diverse crystal structures in future iterations.
+2025-11-23 16:13:27,010 - src.core.evolution - INFO - Selected 20 structures from 30 candidates
+2025-11-23 16:13:27,013 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:13:27,013 - __main__ - INFO - 
+============================================================
+2025-11-23 16:13:27,013 - __main__ - INFO - ITERATION 5
+2025-11-23 16:13:27,013 - __main__ - INFO - ============================================================
+
+2025-11-23 16:13:27,013 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 5) ===
+2025-11-23 16:13:27,013 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:13:27,013 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:13:27,013 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:13:27,013 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:13:27,013 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:13:41,996 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:13:42,011 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:13:42,011 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:13:42,011 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:13:42,012 - src.utils.parser - WARNING - Failed to parse POSCAR block 10: list index out of range
+2025-11-23 16:13:42,012 - src.agents.orchestrator - INFO - Parsed 9 structures
+2025-11-23 16:13:42,012 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:13:42,012 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:13:42,033 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:13:42,033 - src.agents.orchestrator - INFO -   Evaluating 1/9: AlBeO3 - Orthorhombic Structure
+2025-11-23 16:13:42,034 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,051 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,051 - src.agents.orchestrator - INFO -   Evaluating 2/9: SrGaN2 - Tetragonal Structure
+2025-11-23 16:13:42,051 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,066 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,066 - src.agents.orchestrator - INFO -   Evaluating 3/9: LiScP2 - Hexagonal Structure
+2025-11-23 16:13:42,067 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,075 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,075 - src.agents.orchestrator - INFO -   Evaluating 4/9: BaSi2N4 - Monoclinic Structure
+2025-11-23 16:13:42,075 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,085 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,085 - src.agents.orchestrator - INFO -   Evaluating 5/9: MgZnO2 - Cubic Structure
+2025-11-23 16:13:42,085 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,099 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,099 - src.agents.orchestrator - INFO -   Evaluating 6/9: CsAlF3 - Trigonal Structure
+2025-11-23 16:13:42,100 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,108 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,108 - src.agents.orchestrator - INFO -   Evaluating 7/9: RbSbS2 - Orthorhombic Structure
+2025-11-23 16:13:42,108 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,114 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,114 - src.agents.orchestrator - INFO -   Evaluating 8/9: CaSiO3 - Triclinic Structure
+2025-11-23 16:13:42,114 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,128 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,128 - src.agents.orchestrator - INFO -   Evaluating 9/9: BeB2O4 - Monoclinic Structure
+2025-11-23 16:13:42,128 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:13:42,135 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - Generated 9 structures in this iteration
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - Best Ed: -0.913 eV/atom
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:13:42,136 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:13:46,753 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:13:46,760 - src.agents.orchestrator - INFO - New plan: Based on the crystal structure search results provided, here are a few strategies to potentially improve the outcomes of the next iteration:
+
+1. **Enhance Exploration of the Energy Landscape:**
+   - **Introduce New Structural Motifs:** Since all generated structures are valid and metastable, consider introducing new structural motifs or perturbations that haven't been explored yet. This can help in discovering novel low-energy configurations that might have been missed with the current set of exploration strategies.
+   - **Increase Search Space:** If the parameter space allows, expanding the search space by adjusting variables such as lattice parameters or atom types might lead to the discovery of more stable structures.
+
+2. **Focus on Reducing Decomposition Energy:**
+   - **Refinement Techniques:** Implement techniques like genetic algorithms or machine learning models to refine the search towards configurations with lower decomposition energy. These techniques could prioritize structures that are closer to the current best decomposition energy.
+   - **Gradient-Based Optimization:** Apply gradient-based optimization methods to fine-tune the atomic positions and cell parameters of the best metastable structures to achieve lower decomposition energies.
+
+3. **Increase Structural Diversity:**
+   - Although the structural diversity is reported as 1.0, ensuring genuine diversity can be challenging. Consider using clustering techniques to ensure that the structures being generated are not just mathematically diverse but also chemically and physically distinct.
+   - **Hybrid Search Strategies:** Combine different search algorithms (e.g., genetic algorithms with basin-hopping) to increase the diversity of structures. This hybrid approach may uncover a wider range of stable configurations.
+
+By implementing these strategies, the next iteration might yield structures with even lower decomposition energies and potentially more diverse and stable configurations.
+2025-11-23 16:13:46,760 - src.core.evolution - INFO - Selected 20 structures from 29 candidates
+2025-11-23 16:13:46,763 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:13:46,763 - __main__ - INFO - 
+============================================================
+2025-11-23 16:13:46,763 - __main__ - INFO - ITERATION 6
+2025-11-23 16:13:46,763 - __main__ - INFO - ============================================================
+
+2025-11-23 16:13:46,763 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 6) ===
+2025-11-23 16:13:46,763 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:13:46,763 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:13:46,763 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:13:46,763 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:13:46,763 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:14:01,826 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:01,831 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:14:01,831 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:14:01,832 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:14:01,832 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:14:01,832 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:14:01,832 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:14:01,854 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:14:01,854 - src.agents.orchestrator - INFO -   Evaluating 1/10: AlBN2 - Trigonal Structure
+2025-11-23 16:14:01,854 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,867 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,867 - src.agents.orchestrator - INFO -   Evaluating 2/10: MgGaO3 - Orthorhombic Structure
+2025-11-23 16:14:01,868 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,883 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,883 - src.agents.orchestrator - INFO -   Evaluating 3/10: ZnSiP2 - Cubic Structure
+2025-11-23 16:14:01,883 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,911 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,911 - src.agents.orchestrator - INFO -   Evaluating 4/10: KSnCl3 - Tetragonal Structure
+2025-11-23 16:14:01,911 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,926 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,926 - src.agents.orchestrator - INFO -   Evaluating 5/10: NaAsS2 - Hexagonal Structure
+2025-11-23 16:14:01,926 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,942 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,942 - src.agents.orchestrator - INFO -   Evaluating 6/10: YInO3 - Monoclinic Structure
+2025-11-23 16:14:01,942 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,972 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,972 - src.agents.orchestrator - INFO -   Evaluating 7/10: LiBeN3 - Cubic Structure
+2025-11-23 16:14:01,972 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:01,995 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:01,996 - src.agents.orchestrator - INFO -   Evaluating 8/10: CaZnAs2 - Hexagonal Structure
+2025-11-23 16:14:01,996 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:02,010 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:02,010 - src.agents.orchestrator - INFO -   Evaluating 9/10: BaAlN2 - Orthorhombic Structure
+2025-11-23 16:14:02,010 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:02,028 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:02,029 - src.agents.orchestrator - INFO -   Evaluating 10/10: TiGeO3 - Tetragonal Structure
+2025-11-23 16:14:02,029 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:02,044 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:02,044 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:14:02,044 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:14:02,045 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:14:02,045 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:14:02,045 - src.agents.orchestrator - INFO - Best Ed: -0.947 eV/atom
+2025-11-23 16:14:02,045 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:14:02,045 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:14:07,135 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:07,136 - src.agents.orchestrator - INFO - New plan: The crystal structure search results indicate a consistent performance across iterations in terms of valid and metastable structures, as well as structural diversity. However, there are some areas where improvements can be made, particularly concerning decomposition energy metrics. Here are a few strategies to consider for the next iteration:
+
+1. **Targeted Exploration for Lower Decomposition Energies:**
+   - The best decomposition energy improved from iteration 5 to 6 (-0.913 eV/atom to -0.947 eV/atom), but it's not as low as in iteration 4 (-1.056 eV/atom). Consider focusing the search on areas of the parameter space that previously yielded lower energies. This could involve revisiting structural motifs or configurations from iteration 4 that showed promise.
+
+2. **Refinement and Optimization:**
+   - The average decomposition energy has improved from iteration 5 to 6, indicating a trend toward more stable structures. To further refine these results, apply optimization techniques such as genetic algorithms or machine learning models to predict and generate candidate structures that are likely to have lower decomposition energies.
+
+3. **Increase Structural Complexity:**
+   - All iterations show a structural diversity of 1.0, which suggests that a wide variety of structures are being explored. However, if the diversity is not yielding improvements in stability, it might be beneficial to introduce more complex structural parameters or constraints that could lead to novel stable configurations. This could include exploring complex multi-component systems or introducing atypical bonding environments.
+
+By implementing these strategies, the next iteration could potentially yield structures with more favorable decomposition energies while maintaining or enhancing structural diversity.
+2025-11-23 16:14:07,136 - src.core.evolution - INFO - Selected 20 structures from 30 candidates
+2025-11-23 16:14:07,139 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:14:07,139 - __main__ - INFO - 
+============================================================
+2025-11-23 16:14:07,139 - __main__ - INFO - ITERATION 7
+2025-11-23 16:14:07,139 - __main__ - INFO - ============================================================
+
+2025-11-23 16:14:07,139 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 7) ===
+2025-11-23 16:14:07,139 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:14:07,139 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:14:07,139 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:14:07,139 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:14:07,140 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:14:22,280 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:22,281 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:14:22,281 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:14:22,281 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:14:22,281 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:14:22,281 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:14:22,281 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:14:22,302 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:14:22,303 - src.agents.orchestrator - INFO -   Evaluating 1/10: KAlS2 - Tetragonal Structure
+2025-11-23 16:14:22,303 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,315 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,315 - src.agents.orchestrator - INFO -   Evaluating 2/10: GaSnO3 - Orthorhombic Structure
+2025-11-23 16:14:22,316 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,333 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,333 - src.agents.orchestrator - INFO -   Evaluating 3/10: LiScSe2 - Monoclinic Structure
+2025-11-23 16:14:22,333 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,348 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,348 - src.agents.orchestrator - INFO -   Evaluating 4/10: SrGaN2 - Hexagonal Structure
+2025-11-23 16:14:22,348 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,359 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,359 - src.agents.orchestrator - INFO -   Evaluating 5/10: BaZnTe2 - Trigonal Structure
+2025-11-23 16:14:22,359 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,367 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,367 - src.agents.orchestrator - INFO -   Evaluating 6/10: RbGaF3 - Cubic Structure
+2025-11-23 16:14:22,367 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,388 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,388 - src.agents.orchestrator - INFO -   Evaluating 7/10: In2SiO4 - Orthorhombic Structure
+2025-11-23 16:14:22,389 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,406 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,406 - src.agents.orchestrator - INFO -   Evaluating 8/10: KBeO2 - Tetragonal Structure
+2025-11-23 16:14:22,407 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,414 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,414 - src.agents.orchestrator - INFO -   Evaluating 9/10: CsMgSe2 - Monoclinic Structure
+2025-11-23 16:14:22,415 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,428 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,428 - src.agents.orchestrator - INFO -   Evaluating 10/10: TlAlO3 - Hexagonal Structure
+2025-11-23 16:14:22,428 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:22,442 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:22,442 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:14:22,442 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:14:22,443 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:14:22,443 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:14:22,443 - src.agents.orchestrator - INFO - Best Ed: -1.027 eV/atom
+2025-11-23 16:14:22,443 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:14:22,443 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:14:26,769 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:26,773 - src.agents.orchestrator - INFO - New plan: The crystal structure search results indicate a well-performing system with high validity and metastability rates, along with improved decomposition energies over the iterations. However, there is always room for refinement. Here are a few strategies to consider for further improvement:
+
+1. **Focus on Structural Exploration:**
+   - Although the structural diversity is consistently at 1.0, indicating a good range of structures, exploring new search spaces or using different initialization strategies could yield novel structures. Implementing techniques like genetic algorithms or introducing stochastic elements in the generation process might uncover new metastable structures with potentially lower decomposition energies.
+
+2. **Refinement of Energy Calculations:**
+   - Enhancing the precision and accuracy of energy calculations can lead to better identification of truly optimal structures. This could involve using more sophisticated computational methods or increasing the computational resources for energy calculations. Additionally, reassessing and possibly recalibrating the force fields or potential models being used might provide more reliable energy evaluations.
+
+3. **Targeted Optimization of Promising Structures:**
+   - Given the current best decomposition energy of -1.027 eV/atom, it might be beneficial to focus on optimizing the most promising structures from the latest iterations. This could involve performing local optimizations or using techniques such as nudged elastic band (NEB) calculations to explore transition states and energy barriers, potentially discovering pathways to lower energy configurations.
+
+By implementing these strategies, the search process may yield even more stable and energetically favorable crystal structures in future iterations.
+2025-11-23 16:14:26,773 - src.core.evolution - INFO - Selected 20 structures from 30 candidates
+2025-11-23 16:14:26,776 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:14:26,776 - __main__ - INFO - 
+============================================================
+2025-11-23 16:14:26,776 - __main__ - INFO - ITERATION 8
+2025-11-23 16:14:26,776 - __main__ - INFO - ============================================================
+
+2025-11-23 16:14:26,776 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 8) ===
+2025-11-23 16:14:26,776 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:14:26,776 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:14:26,776 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:14:26,776 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:14:26,777 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:14:41,562 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:41,562 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:14:41,562 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:14:41,562 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:14:41,563 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:14:41,563 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:14:41,563 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:14:41,584 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:14:41,585 - src.agents.orchestrator - INFO -   Evaluating 1/10: LiScO2 - Orthorhombic Structure
+2025-11-23 16:14:41,585 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,598 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,598 - src.agents.orchestrator - INFO -   Evaluating 2/10: MgZrN2 - Tetragonal Structure
+2025-11-23 16:14:41,598 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,614 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,614 - src.agents.orchestrator - INFO -   Evaluating 3/10: BaTiS3 - Trigonal Structure
+2025-11-23 16:14:41,614 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,629 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,629 - src.agents.orchestrator - INFO -   Evaluating 4/10: CsPbF3 - Cubic Structure
+2025-11-23 16:14:41,629 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,646 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,647 - src.agents.orchestrator - INFO -   Evaluating 5/10: ZrSiO4 - Monoclinic Structure
+2025-11-23 16:14:41,647 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,662 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,662 - src.agents.orchestrator - INFO -   Evaluating 6/10: KAlO2 - Rhombohedral Structure
+2025-11-23 16:14:41,663 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,671 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,671 - src.agents.orchestrator - INFO -   Evaluating 7/10: SrGeN2 - Tetragonal Structure
+2025-11-23 16:14:41,671 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,680 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,680 - src.agents.orchestrator - INFO -   Evaluating 8/10: CaZnO2 - Orthorhombic Structure
+2025-11-23 16:14:41,680 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,694 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,694 - src.agents.orchestrator - INFO -   Evaluating 9/10: NaMnCl3 - Cubic Structure
+2025-11-23 16:14:41,695 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,710 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,710 - src.agents.orchestrator - INFO -   Evaluating 10/10: RbInO2 - Hexagonal Structure
+2025-11-23 16:14:41,710 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:41,719 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - Best Ed: -1.309 eV/atom
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:14:41,719 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:14:45,443 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:45,443 - src.agents.orchestrator - INFO - New plan: Based on the analysis of the crystal structure search results from iteration 8 and the recent history, here are a few strategies that could be implemented to improve the results in the next iteration:
+
+1. **Enhance Exploration of the Search Space:**
+   - The structural diversity has remained constant at 1.0 across iterations, which indicates that the algorithm is exploring the search space uniformly. However, to potentially discover new and more stable structures, consider introducing controlled randomness or perturbations in the generation of structures. This could involve varying parameters such as atomic positions or lattice parameters more significantly to explore underrepresented regions of the search space.
+
+2. **Refinement of Energy Models:**
+   - The decomposition energies have shown improvement over the iterations, but refining the energy models could help achieve better stability. This could involve using more sophisticated energy calculation methods (if not already in use), such as incorporating machine learning models trained on a larger database of known structures or using hybrid functional approaches for electronic structure calculations to improve accuracy.
+
+3. **Selective Focus on Promising Candidates:**
+   - Since the best decomposition energy has improved significantly in iteration 8, it may be beneficial to focus on structures that are close to this best energy. Consider using a clustering approach to group similar structures and apply more intensive computational resources to the most promising clusters. This selective approach can help refine the search towards structures with potentially lower energies.
+
+By implementing these strategies, you might increase the likelihood of finding more stable and diverse structures in future iterations.
+2025-11-23 16:14:45,443 - src.core.evolution - INFO - Selected 20 structures from 30 candidates
+2025-11-23 16:14:45,447 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:14:45,447 - __main__ - INFO - 
+============================================================
+2025-11-23 16:14:45,447 - __main__ - INFO - ITERATION 9
+2025-11-23 16:14:45,447 - __main__ - INFO - ============================================================
+
+2025-11-23 16:14:45,447 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 9) ===
+2025-11-23 16:14:45,447 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:14:45,447 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:14:45,447 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:14:45,447 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:14:45,447 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:14:57,852 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:14:57,866 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:14:57,866 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:14:57,866 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:14:57,866 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:14:57,866 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:14:57,866 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:14:57,888 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:14:57,888 - src.agents.orchestrator - INFO -   Evaluating 1/10: BeAlN2 - Hexagonal Structure
+2025-11-23 16:14:57,888 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:57,995 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:57,995 - src.agents.orchestrator - INFO -   Evaluating 2/10: LiZnF3 - Tetragonal Structure
+2025-11-23 16:14:57,995 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,018 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,019 - src.agents.orchestrator - INFO -   Evaluating 3/10: BNiO2 - Orthorhombic Structure
+2025-11-23 16:14:58,019 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,042 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,042 - src.agents.orchestrator - INFO -   Evaluating 4/10: CdScN3 - Cubic Structure
+2025-11-23 16:14:58,043 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,061 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,061 - src.agents.orchestrator - INFO -   Evaluating 5/10: GaMgF2 - Monoclinic Structure
+2025-11-23 16:14:58,062 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,083 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,084 - src.agents.orchestrator - INFO -   Evaluating 6/10: SiGeO3 - Trigonal Structure
+2025-11-23 16:14:58,084 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,102 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,102 - src.agents.orchestrator - INFO -   Evaluating 7/10: ZnSnSe3 - Hexagonal Structure
+2025-11-23 16:14:58,103 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,127 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,127 - src.agents.orchestrator - INFO -   Evaluating 8/10: BeBaO3 - Tetragonal Structure
+2025-11-23 16:14:58,128 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,149 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,149 - src.agents.orchestrator - INFO -   Evaluating 9/10: AlTiS2 - Orthorhombic Structure
+2025-11-23 16:14:58,149 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,165 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,165 - src.agents.orchestrator - INFO -   Evaluating 10/10: InGaN2 - Cubic Structure
+2025-11-23 16:14:58,165 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:14:58,180 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - Metastable: 90.0%
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - Best Ed: -1.272 eV/atom
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:14:58,180 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:15:02,697 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:15:02,702 - src.agents.orchestrator - INFO - New plan: Based on the analysis of the crystal structure search results from the recent iterations, here are a few strategies that could potentially improve the outcomes in the next iteration:
+
+1. **Refine Metastability Criteria:**
+   - The latest iteration shows a slight decrease in the metastable and stable rates compared to the previous iterations. This could indicate that the criteria or conditions for a structure to be considered metastable might need refinement. Consider adjusting these criteria to ensure that more structures meet the metastability threshold, possibly by fine-tuning the parameters or constraints used in the stability evaluation.
+
+2. **Explore New Parameter Spaces:**
+   - The consistency in structural diversity (1.0) across iterations suggests that the search might be exploring a limited parameter space. To introduce more variability and potentially discover more stable structures, consider adjusting the search parameters or incorporating new variables. This could involve altering the elemental composition, varying lattice parameters, or exploring different structural motifs.
+
+3. **Enhance Optimization Algorithms:**
+   - Given that the best decomposition energy slightly decreased from iteration 8 to 9, consider enhancing the optimization algorithms used in the search process. Implementing more advanced optimization techniques, such as genetic algorithms, machine learning models, or simulated annealing, can help navigate the energy landscape more effectively and identify structures with lower decomposition energies.
+
+By implementing these strategies, you can aim to improve both the quality and stability of the structures generated in the subsequent iterations.
+2025-11-23 16:15:02,702 - src.core.evolution - INFO - Selected 20 structures from 30 candidates
+2025-11-23 16:15:02,705 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:15:02,705 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:02,705 - __main__ - INFO - ITERATION 10
+2025-11-23 16:15:02,705 - __main__ - INFO - ============================================================
+
+2025-11-23 16:15:02,705 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 10) ===
+2025-11-23 16:15:02,705 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 16:15:02,705 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 16:15:02,705 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 16:15:02,705 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 16:15:02,705 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 16:15:16,296 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:15:16,302 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 16:15:16,302 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 16:15:16,302 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 16:15:16,302 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 16:15:16,302 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 16:15:16,302 - src.core.evaluator - INFO - Loading CHGNet model...
+2025-11-23 16:15:16,324 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 16:15:16,324 - src.agents.orchestrator - INFO -   Evaluating 1/10: ZnBaS3 - Orthorhombic Structure
+2025-11-23 16:15:16,324 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,340 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,340 - src.agents.orchestrator - INFO -   Evaluating 2/10: SrZnO2 - Tetragonal Structure
+2025-11-23 16:15:16,340 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,354 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,354 - src.agents.orchestrator - INFO -   Evaluating 3/10: BeAlSi3 - Hexagonal Structure
+2025-11-23 16:15:16,354 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,381 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,381 - src.agents.orchestrator - INFO -   Evaluating 4/10: BaMgSe2 - Trigonal Structure
+2025-11-23 16:15:16,381 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,462 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,462 - src.agents.orchestrator - INFO -   Evaluating 5/10: CaZnF3 - Cubic Structure
+2025-11-23 16:15:16,462 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,480 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,481 - src.agents.orchestrator - INFO -   Evaluating 6/10: LiAlN3 - Orthorhombic Structure
+2025-11-23 16:15:16,481 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,500 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,500 - src.agents.orchestrator - INFO -   Evaluating 7/10: MgTiO3 - Trigonal Structure
+2025-11-23 16:15:16,500 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,510 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,511 - src.agents.orchestrator - INFO -   Evaluating 8/10: SbZnCl3 - Monoclinic Structure
+2025-11-23 16:15:16,511 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,531 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,531 - src.agents.orchestrator - INFO -   Evaluating 9/10: CaGeO3 - Tetragonal Structure
+2025-11-23 16:15:16,531 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,549 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,549 - src.agents.orchestrator - INFO -   Evaluating 10/10: NiSiB2 - Hexagonal Structure
+2025-11-23 16:15:16,549 - src.core.evaluator - ERROR - Relaxation failed: int() argument must be a string, a bytes-like object or a real number, not 'Element'
+2025-11-23 16:15:16,560 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 16:15:16,560 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 16:15:16,560 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 16:15:16,560 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 16:15:16,561 - src.agents.orchestrator - INFO - Metastable: 90.0%
+2025-11-23 16:15:16,561 - src.agents.orchestrator - INFO - Best Ed: -0.900 eV/atom
+2025-11-23 16:15:16,561 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 16:15:16,561 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 16:15:20,486 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 16:15:20,488 - src.agents.orchestrator - INFO - New plan: Analyzing the crystal structure search results and recent history, we can propose a few strategies to potentially improve outcomes in the next iteration:
+
+1. **Focus on Energy Optimization:**
+   - The recent iteration shows a decline in the best decomposition energy from -1.308 eV/atom (iteration 8) to -0.900 eV/atom (iteration 10). To improve this, consider refining the search algorithm or parameter space to better explore low-energy configurations. Techniques such as genetic algorithms or machine learning models that predict promising low-energy configurations could be integrated to guide the search more effectively.
+
+2. **Enhance Metastable and Stable Structure Recovery:**
+   - Although the valid rate remains high, the percentage of metastable and stable structures decreased slightly from iteration 8 to 10. This suggests a need to better capture these types of structures. Implementing a more targeted approach to explore regions of the phase space known for metastability, or utilizing methods that stabilize intermediate phases, might improve these rates. Additionally, incorporating prior knowledge or data-driven insights about metastable phase regions could be beneficial.
+
+3. **Increase Structural Diversity:**
+   - While structural diversity is reported as 1.0, indicating a high level of diversity, it's crucial to ensure that the diversity does not compromise the search for low-energy configurations. Implementing diversity-promoting strategies such as introducing perturbations to high-energy structures or using ensemble methods to explore various structural hypotheses could help maintain or even enhance diversity without sacrificing energy optimization.
+
+By implementing these strategies, the search process could become more efficient, leading to the discovery of lower-energy and more stable crystal structures in subsequent iterations.
+2025-11-23 16:15:20,489 - src.core.evolution - INFO - Selected 20 structures from 30 candidates
+2025-11-23 16:15:20,492 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_161201
+2025-11-23 16:15:20,492 - src.agents.orchestrator - INFO - Max iterations reached: 10 >= 10
+2025-11-23 16:15:20,492 - __main__ - INFO - 
+Termination condition met.
+2025-11-23 16:15:20,492 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:20,492 - __main__ - INFO - SEARCH COMPLETE
+2025-11-23 16:15:20,492 - __main__ - INFO - ============================================================
+2025-11-23 16:15:20,492 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:20,492 - __main__ - INFO - FILTERING KNOWN MATERIALS
+2025-11-23 16:15:20,492 - __main__ - INFO - ============================================================
+2025-11-23 16:15:20,492 - __main__ - INFO - Querying Materials Project database...
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:21,799 - __main__ - INFO -   Checking materials: 5/96
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 86480.49it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 87381.33it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:22,937 - __main__ - INFO -   Checking materials: 10/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/9 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 9/9 [00:00<00:00, 424143.10it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 91180.52it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:23,961 - __main__ - INFO -   Checking materials: 15/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46603.38it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:24,941 - __main__ - INFO -   Checking materials: 20/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 91180.52it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46603.38it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:25,810 - __main__ - INFO -   Checking materials: 25/96
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 95325.09it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/4 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 4/4 [00:00<00:00, 136400.13it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 45590.26it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:26,545 - __main__ - INFO -   Checking materials: 30/96
+Retrieving SummaryDoc documents:   0%|          | 0/3 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 3/3 [00:00<00:00, 144631.17it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 94254.02it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/4 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 4/4 [00:00<00:00, 182361.04it/s]
+2025-11-23 16:15:27,531 - __main__ - INFO -   Checking materials: 35/96
+Retrieving SummaryDoc documents:   0%|          | 0/4 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 4/4 [00:00<00:00, 212369.82it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:28,490 - __main__ - INFO -   Checking materials: 40/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 93206.76it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 48210.39it/s]
+2025-11-23 16:15:29,435 - __main__ - INFO -   Checking materials: 45/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 48770.98it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 93206.76it/s]
+2025-11-23 16:15:30,442 - __main__ - INFO -   Checking materials: 50/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 49344.75it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47662.55it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:31,375 - __main__ - INFO -   Checking materials: 55/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47127.01it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46091.25it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:32,527 - __main__ - INFO -   Checking materials: 60/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:33,380 - __main__ - INFO -   Checking materials: 65/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 45100.04it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47127.01it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 95325.09it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 48210.39it/s]
+2025-11-23 16:15:34,318 - __main__ - INFO -   Checking materials: 70/96
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 95325.09it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/3 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 3/3 [00:00<00:00, 136770.78it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 48210.39it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46091.25it/s]
+2025-11-23 16:15:35,120 - __main__ - INFO -   Checking materials: 75/96
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46603.38it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:36,029 - __main__ - INFO -   Checking materials: 80/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47662.55it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47662.55it/s]
+2025-11-23 16:15:36,870 - __main__ - INFO -   Checking materials: 85/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 47662.55it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 46603.38it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:37,886 - __main__ - INFO -   Checking materials: 90/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/3 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 3/3 [00:00<00:00, 141381.03it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:38,781 - __main__ - INFO -   Checking materials: 95/96
+Retrieving SummaryDoc documents:   0%|          | 0/6 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 6/6 [00:00<00:00, 34426.57it/s]
+2025-11-23 16:15:38,991 - __main__ - INFO -   Checking materials: 96/96
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 16:15:39,160 - src.utils.material_database - INFO - Categorized 96 structures: 40 known, 56 novel
+2025-11-23 16:15:39,160 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,160 - __main__ - INFO - MATERIAL CATEGORIZATION RESULTS
+2025-11-23 16:15:39,160 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,160 - __main__ - INFO - Total structures: 96
+2025-11-23 16:15:39,160 - __main__ - INFO - Known materials: 40 (41.7%)
+2025-11-23 16:15:39,160 - __main__ - INFO - Novel materials: 56 (58.3%)
+2025-11-23 16:15:39,160 - __main__ - INFO - 
+Known materials found
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrZrO3: Ed = -1.714 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - KScO2: Ed = -1.413 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - MgZrN2 - Tetragonal Structure: Ed = -1.309 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - KZrO3 - Cubic Perovskite Structure: Ed = -1.272 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BaSnN2: Ed = -1.146 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BaGeO3 - Perovskite-like Structure: Ed = -1.046 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - InGaN2 - Cubic Structure: Ed = -1.013 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CaZnO2 - Orthorhombic Structure: Ed = -1.005 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - YAlO3 - Orthorhombic Perovskite: Ed = -1.001 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CsPbF3 - Cubic Structure: Ed = -0.969 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - AlBN2 - Trigonal Structure: Ed = -0.947 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SiGeO3 - Trigonal Structure: Ed = -0.936 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BeBaO3 - Tetragonal Structure: Ed = -0.924 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - MgZnO2 - Cubic Structure: Ed = -0.913 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiScO2 - Orthorhombic Structure: Ed = -0.906 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrZnO2 - Tetragonal Structure: Ed = -0.900 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - GaSnO3 - Orthorhombic Structure: Ed = -0.898 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - KAlO2 - Rhombohedral Structure: Ed = -0.861 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - YInO3 - Monoclinic Structure: Ed = -0.856 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CaGeO3 - Tetragonal Structure: Ed = -0.817 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrGeN2 - Tetragonal Structure: Ed = -0.793 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - ZnSiP2 - Cubic Structure: Ed = -0.793 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - ZrSiO4 - Monoclinic Structure: Ed = -0.782 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - KAlO2 - Layered Structure: Ed = -0.763 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - TlAlO3 - Hexagonal Structure: Ed = -0.761 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrSiN2 - Orthorhombic Structure: Ed = -0.740 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - KInSe2 - Chalcopyrite Structure: Ed = -0.739 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - NaMnCl3 - Cubic Structure: Ed = -0.719 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - TiGeO3 - Tetragonal Structure: Ed = -0.716 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - MgSiO3 - Orthorhombic Silicate Structure: Ed = -0.657 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - NaAsS2 - Hexagonal Structure: Ed = -0.639 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - MgTiO3 - Trigonal Structure: Ed = -0.543 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - RbSbS2 - Orthorhombic Structure: Ed = -0.526 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrGa2S4 - Tetrahedral Sulfide Structure: Ed = -0.481 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - MgGa2S4 - Chalcopyrite Structure: Ed = -0.470 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - Y2GeO5 - Orthorhombic Structure: Ed = -0.448 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - ZnSnP2 - Chalcopyrite Structure: Ed = -0.395 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CaNiF4 - Layered Perovskite Structure: Ed = -0.379 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BaTiS3 - Trigonal Structure: Ed = -0.314 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CaSiO3 - Triclinic Structure: Ed = -0.302 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO - 
+Novel materials found
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrMnN - Ternary Hexagonal Structure: Ed = -1.820 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - AlTiS2 - Orthorhombic Structure: Ed = -1.272 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BeAlN2 - Hexagonal Structure: Ed = -1.197 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BeTeN - Ternary Cubic Structure: Ed = -1.109 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CsNbN3 - Hexagonal Nitrate Structure: Ed = -1.056 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiMgF3: Ed = -1.043 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiScSe2 - Monoclinic Structure: Ed = -1.027 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BNiO2 - Orthorhombic Structure: Ed = -1.007 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - GaMgF2 - Monoclinic Structure: Ed = -0.970 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiBeN2 - Ternary Nitride Structure: Ed = -0.954 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - RbInO2 - Hexagonal Structure: Ed = -0.942 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - CdScN3 - Cubic Structure: Ed = -0.891 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiAgS2 - Layered Structure: Ed = -0.857 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BeAlP2: Ed = -0.853 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrGaN2 - Hexagonal Structure: Ed = -0.830 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - BaSnO2Br - Layered Orthorhombic Structure: Ed = -0.809 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - MgGaO3 - Orthorhombic Structure: Ed = -0.781 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - KAlS2 - Tetragonal Structure: Ed = -0.775 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiBeO2 - Layered Tetrahedral Structure: Ed = -0.764 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiAlN3 - Orthorhombic Structure: Ed = -0.745 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiScP2 - Hexagonal Structure: Ed = -0.743 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - SrGaN2 - Tetragonal Structure: Ed = -0.742 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - ZnBN2: Ed = -0.733 eV/atom
+2025-11-23 16:15:39,160 - __main__ - INFO -   - LiZnF3 - Tetragonal Structure: Ed = -0.700 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - ZnGaN3 - Hexagonal Structure: Ed = -0.690 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - ZnGaAs2 - Ternary Arsenide Structure: Ed = -0.667 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - KSnCl3 - Tetragonal Structure: Ed = -0.665 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BaAlN2 - Orthorhombic Structure: Ed = -0.665 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - RbGaF3 - Cubic Structure: Ed = -0.660 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - CaZnF3 - Cubic Structure: Ed = -0.653 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - LiBeN3 - Cubic Structure: Ed = -0.636 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - KBeO2 - Tetragonal Structure: Ed = -0.630 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - YbCuCl2 - Hexagonal Layered Structure: Ed = -0.627 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - AlBeO3 - Orthorhombic Structure: Ed = -0.619 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - RbInP2 - Phosphide Structure: Ed = -0.613 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - CaZnTe2 - Chalcopyrite Structure: Ed = -0.598 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - Yb2SiS3: Ed = -0.589 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - CsMgSe2 - Monoclinic Structure: Ed = -0.587 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - CsAlSe3: Ed = -0.576 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BaZnTe2 - Trigonal Structure: Ed = -0.575 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BaIn2O5 - Layered Hexagonal Structure: Ed = -0.558 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - CsAlF3 - Trigonal Structure: Ed = -0.504 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - RbZnTe2: Ed = -0.490 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BaSi2N4 - Monoclinic Structure: Ed = -0.464 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - In2SiO4 - Orthorhombic Structure: Ed = -0.458 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - CaZnAs2 - Hexagonal Structure: Ed = -0.452 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - NiSiB2 - Hexagonal Structure: Ed = -0.437 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - Al2Ga2O5 - Orthorhombic Structure: Ed = -0.401 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - Ga2SiO4: Ed = -0.311 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - Mg2AlP4 - Tetrahedral Structure: Ed = -0.297 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BeB2O4 - Monoclinic Structure: Ed = -0.294 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BeAlSi3 - Hexagonal Structure: Ed = -0.289 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - SbZnCl3 - Monoclinic Structure: Ed = -0.220 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - BaMgSe2 - Trigonal Structure: Ed = -0.135 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - ZnBaS3 - Orthorhombic Structure: Ed = 0.395 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO -   - ZnSnSe3 - Hexagonal Structure: Ed = 0.494 eV/atom
+2025-11-23 16:15:39,161 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,161 - __main__ - INFO - SAVING RESULTS
+2025-11-23 16:15:39,161 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,161 - __main__ - INFO - Saving 56 novel structures...
+2025-11-23 16:15:39,166 - __main__ - INFO - Saving 40 known structures...
+2025-11-23 16:15:39,169 - __main__ - INFO - Saving all 96 structures...
+2025-11-23 16:15:39,177 - __main__ - INFO - 
+Saving 96 structures to data/results/run_20251123_161201
+2025-11-23 16:15:39,185 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,185 - __main__ - INFO - GENERATING VISUALIZATIONS
+2025-11-23 16:15:39,185 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,185 - __main__ - INFO - Creating energy distribution for novel materials...
+2025-11-23 16:15:39,373 - __main__ - INFO - Creating energy distribution for all materials...
+2025-11-23 16:15:39,554 - __main__ - INFO - Creating convergence plot...
+2025-11-23 16:15:39,821 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - FINAL STATISTICS - ALL STRUCTURES
+2025-11-23 16:15:39,822 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - Total generated: 96
+2025-11-23 16:15:39,822 - __main__ - INFO - Valid: 96 (100.0%)
+2025-11-23 16:15:39,822 - __main__ - INFO - Metastable: 94 (97.9%)
+2025-11-23 16:15:39,822 - __main__ - INFO - Stable: 94 (97.9%)
+2025-11-23 16:15:39,822 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - FINAL STATISTICS - NOVEL MATERIALS ONLY
+2025-11-23 16:15:39,822 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - Novel structures: 56
+2025-11-23 16:15:39,822 - __main__ - INFO - Novel valid: 56 (100.0%)
+2025-11-23 16:15:39,822 - __main__ - INFO - Novel stable: 54 (96.4%)
+2025-11-23 16:15:39,822 - __main__ - INFO - 
+🌟 BEST NOVEL STRUCTURE:
+2025-11-23 16:15:39,822 - __main__ - INFO -    Formula: SrMnN - Ternary Hexagonal Structure
+2025-11-23 16:15:39,822 - __main__ - INFO -    Decomposition energy: -1.820 eV/atom
+2025-11-23 16:15:39,822 - __main__ - INFO -    This material is NOT in Materials Project database!
+2025-11-23 16:15:39,822 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - RESULTS SUMMARY
+2025-11-23 16:15:39,822 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - Output directory: data/results/run_20251123_161201
+2025-11-23 16:15:39,822 - __main__ - INFO -   - novel_*.json: 56 novel materials
+2025-11-23 16:15:39,822 - __main__ - INFO -   - known_*.json: 40 known materials
+2025-11-23 16:15:39,822 - __main__ - INFO -   - all_*.json: 96 total materials
+2025-11-23 16:15:39,822 - __main__ - INFO -   - *.png: Visualization plots
+2025-11-23 16:15:39,822 - __main__ - INFO - 
+============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - FINAL STATISTICS
+2025-11-23 16:15:39,822 - __main__ - INFO - ============================================================
+2025-11-23 16:15:39,822 - __main__ - INFO - Total generated: 96
+2025-11-23 16:15:39,822 - __main__ - INFO - Valid: 96 (100.0%)
+2025-11-23 16:15:39,822 - __main__ - INFO - Metastable: 94 (97.9%)
+2025-11-23 16:15:39,822 - __main__ - INFO - Stable: 94 (97.9%)
+2025-11-23 16:15:39,822 - __main__ - INFO - 
+Best structure: SrMnN - Ternary Hexagonal Structure
+2025-11-23 16:15:39,822 - __main__ - INFO - Decomposition energy: -1.820 eV/atom
+2025-11-23 16:15:39,822 - __main__ - INFO - 
+Results saved to: data/results/run_20251123_161201
+Saved plot to data/results/run_20251123_161201/energy_distribution_novel.png
+Saved plot to data/results/run_20251123_161201/energy_distribution_all.png
+Saved plot to data/results/run_20251123_161201/convergence.png

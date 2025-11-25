@@ -1,0 +1,60 @@
+{
+  "formula": "RbTiO3 - Perovskite Structure",
+  "lattice": [
+    [
+      3.82,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      3.82,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.82
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ]
+  ],
+  "species": [
+    "Rb",
+    "O",
+    "O",
+    "O",
+    "Ti"
+  ],
+  "energy": 1.037340760231018,
+  "decomposition_energy": 1.037340760231018,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

@@ -1,0 +1,60 @@
+{
+  "formula": "SrSnO3 - Perovskite Structure",
+  "lattice": [
+    [
+      5.6,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.6,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.6
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Sr",
+    "O",
+    "O",
+    "O",
+    "Sn"
+  ],
+  "energy": -0.8744988441467285,
+  "decomposition_energy": -0.8744988441467285,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

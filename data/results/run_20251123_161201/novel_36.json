@@ -1,0 +1,54 @@
+{
+  "formula": "BaZnTe2 - Trigonal Structure",
+  "lattice": [
+    [
+      7.2,
+      0.0,
+      0.0
+    ],
+    [
+      -3.6,
+      6.235,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.5
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.75,
+      0.0
+    ],
+    [
+      0.75,
+      0.25,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "species": [
+    "Zn",
+    "Te",
+    "Te",
+    "Ba"
+  ],
+  "energy": -0.5752699971199036,
+  "decomposition_energy": -0.5752699971199036,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

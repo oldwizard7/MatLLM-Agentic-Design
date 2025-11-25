@@ -1,0 +1,57 @@
+{
+  "formula": "KF3",
+  "lattice": [
+    [
+      7.12,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      7.12,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.12
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ]
+  ],
+  "species": [
+    "K",
+    "F",
+    "F",
+    "F"
+  ],
+  "energy": -2.0625767707824707,
+  "decomposition_energy": -2.0625767707824707,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {
+    "relaxation_steps": 0,
+    "backend": "orb"
+  }
+}

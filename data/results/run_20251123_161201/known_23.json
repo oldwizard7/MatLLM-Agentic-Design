@@ -1,0 +1,60 @@
+{
+  "formula": "GaSnO3 - Orthorhombic Structure",
+  "lattice": [
+    [
+      5.9,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.2,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.9
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.75,
+      0.25
+    ],
+    [
+      0.75,
+      0.25,
+      0.75
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ]
+  ],
+  "species": [
+    "Ga",
+    "Sn",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -0.8975345492362976,
+  "decomposition_energy": -0.8975345492362976,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

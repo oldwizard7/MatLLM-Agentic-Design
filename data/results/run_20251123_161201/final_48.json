@@ -1,0 +1,54 @@
+{
+  "formula": "ZnSiP2 - Cubic Structure",
+  "lattice": [
+    [
+      5.6,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.6,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.6
+    ]
+  ],
+  "positions": [
+    [
+      0.25,
+      0.25,
+      0.25
+    ],
+    [
+      0.75,
+      0.75,
+      0.75
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "species": [
+    "P",
+    "P",
+    "Si",
+    "Zn"
+  ],
+  "energy": -0.7926072478294373,
+  "decomposition_energy": -0.7926072478294373,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

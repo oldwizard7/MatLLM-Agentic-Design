@@ -1,0 +1,48 @@
+{
+  "formula": "ScAlN - Wurtzite Structure",
+  "lattice": [
+    [
+      3.2,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.2,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.0
+    ]
+  ],
+  "positions": [
+    [
+      0.333,
+      0.667,
+      0.25
+    ],
+    [
+      0.667,
+      0.333,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "species": [
+    "Al",
+    "N",
+    "Sc"
+  ],
+  "energy": -1.7285770177841187,
+  "decomposition_energy": -1.7285770177841187,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

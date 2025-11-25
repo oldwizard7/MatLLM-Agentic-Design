@@ -1,0 +1,60 @@
+{
+  "formula": "SrGeO3 - Perovskite Structure",
+  "lattice": [
+    [
+      4.2,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.2,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.2
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ]
+  ],
+  "species": [
+    "Sr",
+    "O",
+    "O",
+    "O",
+    "Ge"
+  ],
+  "energy": 1.1292052268981934,
+  "decomposition_energy": 1.1292052268981934,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

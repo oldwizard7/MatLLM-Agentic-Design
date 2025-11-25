@@ -1,0 +1,16 @@
+[
+  {
+    "iteration": 1,
+    "total_generated": 8,
+    "valid_count": 8,
+    "metastable_count": 1,
+    "stable_count": 1,
+    "valid_rate": 100.0,
+    "metastable_rate": 12.5,
+    "stable_rate": 12.5,
+    "best_ed": -0.583002507686615,
+    "avg_ed": -0.583002507686615,
+    "worst_ed": -0.583002507686615,
+    "diversity": 1.0
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "formula": "SrMnN - Ternary Hexagonal Structure",
+  "lattice": [
+    [
+      4.48,
+      0.0,
+      0.0
+    ],
+    [
+      -2.24,
+      3.8784787132,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.819
+    ]
+  ],
+  "positions": [
+    [
+      0.333333333333,
+      0.666666666667,
+      0.25
+    ],
+    [
+      0.666666666667,
+      0.333333333333,
+      0.75
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "species": [
+    "Sr",
+    "Mn",
+    "N"
+  ],
+  "energy": -1.8203400373458862,
+  "decomposition_energy": -1.8203400373458862,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

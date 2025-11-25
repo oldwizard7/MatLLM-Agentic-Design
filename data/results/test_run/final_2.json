@@ -1,0 +1,60 @@
+{
+  "formula": "BaZrO3 - Perovskite Structure",
+  "lattice": [
+    [
+      4.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.3
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ]
+  ],
+  "species": [
+    "Ba",
+    "Zr",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -1.7379411458969116,
+  "decomposition_energy": -1.7379411458969116,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

@@ -1,0 +1,54 @@
+{
+  "formula": "NiSiB2 - Hexagonal Structure",
+  "lattice": [
+    [
+      4.76,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.76,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      13.98
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.333,
+      0.667,
+      0.25
+    ],
+    [
+      0.667,
+      0.333,
+      0.75
+    ]
+  ],
+  "species": [
+    "Ni",
+    "Si",
+    "B",
+    "B"
+  ],
+  "energy": -0.43732142448425293,
+  "decomposition_energy": -0.43732142448425293,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

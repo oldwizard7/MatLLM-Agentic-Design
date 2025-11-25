@@ -1,0 +1,54 @@
+{
+  "formula": "KAlO2 - Rhombohedral Structure",
+  "lattice": [
+    [
+      5.15,
+      0.0,
+      0.0
+    ],
+    [
+      -2.575,
+      4.46,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.8
+    ]
+  ],
+  "positions": [
+    [
+      0.333,
+      0.667,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.333,
+      0.667,
+      0.5
+    ],
+    [
+      0.667,
+      0.333,
+      0.75
+    ]
+  ],
+  "species": [
+    "Al",
+    "K",
+    "O",
+    "O"
+  ],
+  "energy": -0.8611181974411011,
+  "decomposition_energy": -0.8611181974411011,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

@@ -1,0 +1,54 @@
+{
+  "formula": "SrGaN2 - Hexagonal Structure",
+  "lattice": [
+    [
+      5.55,
+      0.0,
+      0.0
+    ],
+    [
+      -2.775,
+      4.808,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.8
+    ]
+  ],
+  "positions": [
+    [
+      0.333,
+      0.667,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.333,
+      0.667,
+      0.25
+    ],
+    [
+      0.667,
+      0.333,
+      0.75
+    ]
+  ],
+  "species": [
+    "Ga",
+    "N",
+    "N",
+    "Sr"
+  ],
+  "energy": -0.8300777077674866,
+  "decomposition_energy": -0.8300777077674866,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

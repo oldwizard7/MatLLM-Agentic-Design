@@ -1,0 +1,60 @@
+{
+  "formula": "ZnSnO3 - Perovskite Structure",
+  "lattice": [
+    [
+      4.1,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.1,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.1
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Zn",
+    "Sn",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -1.0539679527282715,
+  "decomposition_energy": -1.0539679527282715,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

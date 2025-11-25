@@ -1,0 +1,54 @@
+{
+  "formula": "KBeO2 - Tetragonal Structure",
+  "lattice": [
+    [
+      6.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      8.5
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.25,
+      0.25,
+      0.0
+    ],
+    [
+      0.75,
+      0.75,
+      0.5
+    ]
+  ],
+  "species": [
+    "Be",
+    "K",
+    "O",
+    "O"
+  ],
+  "energy": -0.6297221779823303,
+  "decomposition_energy": -0.6297221779823303,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

@@ -1,0 +1,60 @@
+{
+  "formula": "BaGeO3 - Perovskite-like Structure",
+  "lattice": [
+    [
+      4.98,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.98,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.98
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.75,
+      0.25
+    ],
+    [
+      0.75,
+      0.25,
+      0.75
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ]
+  ],
+  "species": [
+    "Ba",
+    "Ge",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -1.0460147857666016,
+  "decomposition_energy": -1.0460147857666016,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

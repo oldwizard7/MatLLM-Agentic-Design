@@ -1,0 +1,54 @@
+{
+  "formula": "SrGeN2 - Tetragonal Structure",
+  "lattice": [
+    [
+      5.45,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.45,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      8.18
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.5,
+      0.25
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.75
+    ]
+  ],
+  "species": [
+    "Ge",
+    "N",
+    "N",
+    "Sr"
+  ],
+  "energy": -0.7933399081230164,
+  "decomposition_energy": -0.7933399081230164,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

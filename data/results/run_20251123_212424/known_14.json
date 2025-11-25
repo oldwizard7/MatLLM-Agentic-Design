@@ -1,0 +1,63 @@
+{
+  "formula": "BaBeO3",
+  "lattice": [
+    [
+      5.8,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      5.8,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      8.14
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ]
+  ],
+  "species": [
+    "Ba",
+    "Be",
+    "O",
+    "O",
+    "O"
+  ],
+  "energy": -2.0752002716064455,
+  "decomposition_energy": -2.0752002716064455,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {
+    "relaxation_steps": 0,
+    "backend": "orb"
+  }
+}

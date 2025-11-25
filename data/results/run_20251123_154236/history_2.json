@@ -1,0 +1,30 @@
+[
+  {
+    "iteration": 1,
+    "total_generated": 8,
+    "valid_count": 8,
+    "metastable_count": 1,
+    "stable_count": 1,
+    "valid_rate": 100.0,
+    "metastable_rate": 12.5,
+    "stable_rate": 12.5,
+    "best_ed": -0.583002507686615,
+    "avg_ed": -0.583002507686615,
+    "worst_ed": -0.583002507686615,
+    "diversity": 1.0
+  },
+  {
+    "iteration": 2,
+    "total_generated": 6,
+    "valid_count": 6,
+    "metastable_count": 4,
+    "stable_count": 4,
+    "valid_rate": 100.0,
+    "metastable_rate": 66.66666666666667,
+    "stable_rate": 66.66666666666667,
+    "best_ed": -1.0652607679367065,
+    "avg_ed": -1.0005269050598145,
+    "worst_ed": -0.9015805125236511,
+    "diversity": 1.0
+  }
+]

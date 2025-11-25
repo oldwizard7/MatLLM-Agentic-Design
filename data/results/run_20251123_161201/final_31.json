@@ -1,0 +1,54 @@
+{
+  "formula": "RbInP2 - Phosphide Structure",
+  "lattice": [
+    [
+      6.85,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.85,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      6.85
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.75,
+      0.25
+    ],
+    [
+      0.75,
+      0.25,
+      0.75
+    ]
+  ],
+  "species": [
+    "Rb",
+    "In",
+    "P",
+    "P"
+  ],
+  "energy": -0.6128183007240295,
+  "decomposition_energy": -0.6128183007240295,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

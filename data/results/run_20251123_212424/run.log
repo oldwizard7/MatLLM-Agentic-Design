@@ -1,0 +1,357 @@
+2025-11-23 21:24:28,030 - __main__ - INFO - Loading configuration from config/config.yaml
+2025-11-23 21:24:28,033 - __main__ - INFO - Initializing Orchestrator Agent...
+2025-11-23 21:24:28,063 - src.core.evaluator - INFO - Loading CHGNET model...
+2025-11-23 21:24:29,278 - src.core.evaluator - INFO - CHGNet loaded successfully
+2025-11-23 21:24:29,278 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 21:24:29,283 - __main__ - INFO - Loading initial structures from data/reference_examples/
+2025-11-23 21:24:29,283 - src.agents.orchestrator - INFO - Initializing search...
+2025-11-23 21:24:29,283 - src.agents.orchestrator - INFO - Loading reference examples from data/reference_examples/
+2025-11-23 21:24:29,284 - src.utils.data_manager - INFO - Loaded 3 structures from data/reference_examples/
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO - Loaded 3 reference examples:
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO -   - CaTiO3 - Perovskite Structure
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO -   - SiO2 - Quartz Structure
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO -   - NaCl - Rock Salt Structure
+2025-11-23 21:24:29,284 - src.agents.workers.structure_generator - INFO - Set 3 reference examples for format
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO - Initialization complete. Ready to generate structures.
+2025-11-23 21:24:29,284 - __main__ - INFO - 
+============================================================
+2025-11-23 21:24:29,284 - __main__ - INFO - Starting MatLLMSearch ACE Loop
+2025-11-23 21:24:29,284 - __main__ - INFO - ============================================================
+
+2025-11-23 21:24:29,284 - __main__ - INFO - 
+============================================================
+2025-11-23 21:24:29,284 - __main__ - INFO - ITERATION 1
+2025-11-23 21:24:29,284 - __main__ - INFO - ============================================================
+
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 1) ===
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 21:24:29,284 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 21:24:29,284 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 21:24:29,285 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 21:24:45,225 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:24:45,246 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 21:24:45,246 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 21:24:45,246 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 21:24:45,246 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 21:24:45,246 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 21:24:45,246 - src.core.evaluator - INFO - Loading ORB model...
+2025-11-23 21:24:45,336 - src.core.evaluator - INFO - Loading ORB model: orb-v3 on cpu
+/home/ctong29/miniconda3/envs/matllm_agent/lib/python3.11/site-packages/orb_models/utils.py:30: UserWarning: Setting global torch default dtype to torch.float32.
+  warnings.warn(f"Setting global torch default dtype to {torch_dtype}.")
+2025-11-23 21:24:45,679 - cached_path - INFO - cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-20-mpa-20250404.ckpt is up-to-date
+2025-11-23 21:24:47,067 - src.core.evaluator - INFO - ORB-V3 loaded successfully on cpu
+2025-11-23 21:24:47,067 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 21:24:47,067 - src.agents.orchestrator - INFO -   Evaluating 1/10: ZnGeN2 - Wurtzite Structure
+2025-11-23 21:24:58,153 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:24:58,153 - src.agents.orchestrator - INFO -   Evaluating 2/10: MgSiO3 - Pyroxene Structure
+2025-11-23 21:25:04,120 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:04,121 - src.agents.orchestrator - INFO -   Evaluating 3/10: Al2Ga2O3 - β-Gallium Oxide Structure
+2025-11-23 21:25:10,090 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:10,091 - src.agents.orchestrator - INFO -   Evaluating 4/10: SrZnO2 - Orthorhombic Structure
+2025-11-23 21:25:11,266 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:11,266 - src.agents.orchestrator - INFO -   Evaluating 5/10: LiInSe2 - Chalcopyrite Structure
+2025-11-23 21:25:11,685 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:11,685 - src.agents.orchestrator - INFO -   Evaluating 6/10: BaCdF4 - Perovskite-derived Structure
+2025-11-23 21:25:13,868 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:13,868 - src.agents.orchestrator - INFO -   Evaluating 7/10: KLaS2 - Layered Structure
+2025-11-23 21:25:16,637 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:16,638 - src.agents.orchestrator - INFO -   Evaluating 8/10: CaZn2As2 - Tetragonal Structure
+2025-11-23 21:25:16,665 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:16,665 - src.agents.orchestrator - INFO -   Evaluating 9/10: YAlO3 - Perovskite Structure
+2025-11-23 21:25:16,702 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:16,702 - src.agents.orchestrator - INFO -   Evaluating 10/10: BaSi2N4 - Orthorhombic Structure
+2025-11-23 21:25:27,506 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - Best Ed: -6.670 eV/atom
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 21:25:27,506 - src.agents.hypothesis_gen - INFO - Generating hypothesis for next iteration
+2025-11-23 21:25:27,506 - src.agents.hypothesis_gen - INFO - Thought: Insufficient energy data from parents. Focus on generating diverse candidates and obtaining valid energies.
+2025-11-23 21:25:27,506 - src.agents.hypothesis_gen - INFO - Action: Generate diverse initial structures to gather energy estimates
+2025-11-23 21:25:27,506 - src.agents.hypothesis_gen - INFO - Expected outcome: Expected to generate structures with improved stability based on Generate diverse initial structures to gather energy estimates
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO - New strategy generated:
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO -   Thought: Insufficient energy data from parents. Focus on generating diverse candidates an...
+2025-11-23 21:25:27,506 - src.agents.orchestrator - INFO -   Action: Generate diverse initial structures to gather energy estimates
+2025-11-23 21:25:27,506 - src.core.evolution - INFO - Selected 10 structures from 10 candidates
+2025-11-23 21:25:27,508 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_212424
+2025-11-23 21:25:27,508 - __main__ - INFO - 
+============================================================
+2025-11-23 21:25:27,508 - __main__ - INFO - ITERATION 2
+2025-11-23 21:25:27,508 - __main__ - INFO - ============================================================
+
+2025-11-23 21:25:27,509 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 2) ===
+2025-11-23 21:25:27,509 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 21:25:27,509 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 21:25:27,509 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 21:25:27,509 - src.agents.orchestrator - INFO - Applying curated strategy from previous iteration
+2025-11-23 21:25:27,509 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 21:25:27,509 - src.agents.workers.structure_generator - INFO - Using strategy: REASONING:
+Insufficient energy data from parents. Focus on generating diverse candidates and obtaini...
+2025-11-23 21:25:27,509 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 21:25:47,940 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:25:47,940 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 21:25:47,940 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 21:25:47,941 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 21:25:47,941 - src.utils.parser - WARNING - Failed to parse POSCAR block 10: list index out of range
+2025-11-23 21:25:47,941 - src.agents.orchestrator - INFO - Parsed 9 structures
+2025-11-23 21:25:47,941 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 21:25:47,941 - src.core.evaluator - INFO - Loading ORB model...
+2025-11-23 21:25:47,941 - src.core.evaluator - INFO - Loading ORB model: orb-v3 on cpu
+/home/ctong29/miniconda3/envs/matllm_agent/lib/python3.11/site-packages/orb_models/utils.py:30: UserWarning: Setting global torch default dtype to torch.float32.
+  warnings.warn(f"Setting global torch default dtype to {torch_dtype}.")
+2025-11-23 21:25:48,238 - cached_path - INFO - cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-20-mpa-20250404.ckpt is up-to-date
+2025-11-23 21:25:48,303 - src.core.evaluator - INFO - ORB-V3 loaded successfully on cpu
+2025-11-23 21:25:48,303 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 21:25:48,303 - src.agents.orchestrator - INFO -   Evaluating 1/9: Be2B2O5
+2025-11-23 21:26:00,103 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:00,103 - src.agents.orchestrator - INFO -   Evaluating 2/9: Li2MgGeO4
+2025-11-23 21:26:05,619 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:05,620 - src.agents.orchestrator - INFO -   Evaluating 3/9: AlGaN2
+2025-11-23 21:26:07,693 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:07,693 - src.agents.orchestrator - INFO -   Evaluating 4/9: ZnSe2O2
+2025-11-23 21:26:09,486 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:09,486 - src.agents.orchestrator - INFO -   Evaluating 5/9: Sc2SiO4
+2025-11-23 21:26:14,845 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:14,846 - src.agents.orchestrator - INFO -   Evaluating 6/9: Ba2TiB3O8
+2025-11-23 21:26:22,848 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:22,848 - src.agents.orchestrator - INFO -   Evaluating 7/9: Li3SbO4
+2025-11-23 21:26:29,562 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:29,562 - src.agents.orchestrator - INFO -   Evaluating 8/9: CuAlP2S6
+2025-11-23 21:26:29,594 - src.core.evaluator - ERROR - Relaxation failed with orb: data must be finite, check for nan or inf values
+2025-11-23 21:26:29,594 - src.agents.orchestrator - INFO -   Evaluating 9/9: Ti2ZnO4
+2025-11-23 21:26:35,227 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - Generated 9 structures in this iteration
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - Valid: 88.9%
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - Metastable: 88.9%
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - Best Ed: -7.479 eV/atom
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 21:26:35,227 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 21:26:35,227 - src.agents.hypothesis_gen - INFO - Generating hypothesis for next iteration
+2025-11-23 21:26:35,228 - src.agents.hypothesis_gen - INFO - Thought: Achieved stable structures (best Ed = -6.670). Can optimize for additional properties.
+2025-11-23 21:26:35,228 - src.agents.hypothesis_gen - INFO - Action: Explore compositional substitutions for property enhancement
+2025-11-23 21:26:35,228 - src.agents.hypothesis_gen - INFO - Expected outcome: Expected to generate structures with improved stability based on Explore compositional substitutions for property enhancement
+2025-11-23 21:26:35,228 - src.agents.orchestrator - INFO - New strategy generated:
+2025-11-23 21:26:35,228 - src.agents.orchestrator - INFO -   Thought: Achieved stable structures (best Ed = -6.670). Can optimize for additional prope...
+2025-11-23 21:26:35,228 - src.agents.orchestrator - INFO -   Action: Explore compositional substitutions for property enhancement
+2025-11-23 21:26:35,228 - src.core.evolution - INFO - Selected 19 structures from 19 candidates
+2025-11-23 21:26:35,232 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_212424
+2025-11-23 21:26:35,232 - __main__ - INFO - 
+============================================================
+2025-11-23 21:26:35,232 - __main__ - INFO - ITERATION 3
+2025-11-23 21:26:35,232 - __main__ - INFO - ============================================================
+
+2025-11-23 21:26:35,232 - src.agents.orchestrator - INFO - === Generate Phase (Iteration 3) ===
+2025-11-23 21:26:35,232 - src.agents.orchestrator - INFO - Task: stable wide-bandgap semiconductors
+2025-11-23 21:26:35,232 - src.agents.orchestrator - INFO - Constraints: {'band_gap': '>2.5 eV', 'formation_energy': '<-1.0 eV/atom', 'decomposition_energy': '<-10.0 eV/atom'}
+2025-11-23 21:26:35,232 - src.agents.orchestrator - INFO - Generating 10 new structures from scratch...
+2025-11-23 21:26:35,232 - src.agents.orchestrator - INFO - Applying curated strategy from previous iteration
+2025-11-23 21:26:35,232 - src.agents.workers.structure_generator - INFO - Generating 10 new structures for: stable wide-bandgap semiconductors
+2025-11-23 21:26:35,233 - src.agents.workers.structure_generator - INFO - Using strategy: REASONING:
+Achieved stable structures (best Ed = -6.670). Can optimize for additional properties.
+
+R...
+2025-11-23 21:26:35,233 - src.utils.llm_client - INFO - Generating 1 response(s) using gpt-4o
+2025-11-23 21:26:50,173 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:26:50,178 - src.agents.workers.structure_generator - INFO - LLM generated 1 response(s)
+2025-11-23 21:26:50,178 - src.agents.orchestrator - INFO - Parsing generated structures...
+2025-11-23 21:26:50,178 - src.utils.parser - INFO - Found 10 POSCAR blocks in response
+2025-11-23 21:26:50,178 - src.agents.orchestrator - INFO - Parsed 10 structures
+2025-11-23 21:26:50,178 - src.agents.orchestrator - INFO - Evaluating structures...
+2025-11-23 21:26:50,178 - src.core.evaluator - INFO - Loading ORB model...
+2025-11-23 21:26:50,178 - src.core.evaluator - INFO - Loading ORB model: orb-v3 on cpu
+2025-11-23 21:26:50,493 - cached_path - INFO - cache of https://orbitalmaterials-public-models.s3.us-west-1.amazonaws.com/forcefields/orb-v3/orb-v3-conservative-20-mpa-20250404.ckpt is up-to-date
+2025-11-23 21:26:50,558 - src.core.evaluator - INFO - ORB-V3 loaded successfully on cpu
+2025-11-23 21:26:50,559 - src.core.evaluator - INFO - Loading Materials Project phase diagram...
+2025-11-23 21:26:50,559 - src.agents.orchestrator - INFO -   Evaluating 1/10: ZnGeO4
+2025-11-23 21:26:50,585 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:50,585 - src.agents.orchestrator - INFO -   Evaluating 2/10: LiGaN2
+2025-11-23 21:26:52,256 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:52,257 - src.agents.orchestrator - INFO -   Evaluating 3/10: KF3
+2025-11-23 21:26:52,275 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:52,275 - src.agents.orchestrator - INFO -   Evaluating 4/10: MgIn2Se4
+2025-11-23 21:26:54,137 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:26:54,137 - src.agents.orchestrator - INFO -   Evaluating 5/10: CaAl2O4
+2025-11-23 21:27:00,003 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:27:00,003 - src.agents.orchestrator - INFO -   Evaluating 6/10: SrZrP2
+2025-11-23 21:27:02,129 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:27:02,129 - src.agents.orchestrator - INFO -   Evaluating 7/10: Li2SiN2
+2025-11-23 21:27:02,849 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:27:02,849 - src.agents.orchestrator - INFO -   Evaluating 8/10: BaBeO3
+2025-11-23 21:27:02,872 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:27:02,872 - src.agents.orchestrator - INFO -   Evaluating 9/10: Na3Sb
+2025-11-23 21:27:02,891 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:27:02,891 - src.agents.orchestrator - INFO -   Evaluating 10/10: SrB2N2
+2025-11-23 21:27:02,909 - src.core.evaluator - WARNING - No phase diagram data, returning energy as Ed
+2025-11-23 21:27:02,909 - src.agents.orchestrator - INFO - Generated 10 structures in this iteration
+2025-11-23 21:27:02,909 - src.agents.orchestrator - INFO - === Reflect Phase ===
+2025-11-23 21:27:02,909 - src.agents.orchestrator - INFO - Valid: 100.0%
+2025-11-23 21:27:02,909 - src.agents.orchestrator - INFO - Metastable: 100.0%
+2025-11-23 21:27:02,909 - src.agents.orchestrator - INFO - Best Ed: -5.400 eV/atom
+2025-11-23 21:27:02,910 - src.agents.orchestrator - INFO - Diversity: 1.00
+2025-11-23 21:27:02,910 - src.agents.orchestrator - INFO - === Curate Phase ===
+2025-11-23 21:27:02,910 - src.agents.hypothesis_gen - INFO - Generating hypothesis for next iteration
+2025-11-23 21:27:02,910 - src.agents.hypothesis_gen - INFO - Thought: Achieved stable structures (best Ed = -7.479). Can optimize for additional properties.
+2025-11-23 21:27:02,910 - src.agents.hypothesis_gen - INFO - Action: Explore compositional substitutions for property enhancement
+2025-11-23 21:27:02,910 - src.agents.hypothesis_gen - INFO - Expected outcome: Expected to generate structures with improved stability based on Explore compositional substitutions for property enhancement
+2025-11-23 21:27:02,910 - src.agents.orchestrator - INFO - New strategy generated:
+2025-11-23 21:27:02,910 - src.agents.orchestrator - INFO -   Thought: Achieved stable structures (best Ed = -7.479). Can optimize for additional prope...
+2025-11-23 21:27:02,910 - src.agents.orchestrator - INFO -   Action: Explore compositional substitutions for property enhancement
+2025-11-23 21:27:02,910 - src.core.evolution - INFO - Selected 20 structures from 29 candidates
+2025-11-23 21:27:02,914 - src.agents.orchestrator - INFO - Checkpoint saved to data/results/run_20251123_212424
+2025-11-23 21:27:02,914 - src.agents.orchestrator - INFO - Max iterations reached: 3 >= 3
+2025-11-23 21:27:02,914 - __main__ - INFO - 
+Termination condition met.
+2025-11-23 21:27:02,914 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:02,914 - __main__ - INFO - SEARCH COMPLETE
+2025-11-23 21:27:02,914 - __main__ - INFO - ============================================================
+2025-11-23 21:27:02,915 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:02,915 - __main__ - INFO - FILTERING KNOWN MATERIALS
+2025-11-23 21:27:02,915 - __main__ - INFO - ============================================================
+2025-11-23 21:27:02,915 - __main__ - INFO - Querying Materials Project database...
+CHGNet v0.3.0 initialized with 412,525 parameters
+CHGNet will run on cpu
+CHGNet will run on cpu
+Retrieving SummaryDoc documents:   0%|          | 0/3 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 3/3 [00:00<00:00, 116508.44it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 39945.75it/s]
+2025-11-23 21:27:04,430 - __main__ - INFO -   Checking materials: 5/29
+Retrieving SummaryDoc documents:   0%|          | 0/5 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 5/5 [00:00<00:00, 182361.04it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 44150.57it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 42366.71it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/4 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 4/4 [00:00<00:00, 188508.04it/s]
+2025-11-23 21:27:05,575 - __main__ - INFO -   Checking materials: 10/29
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 94254.02it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/2 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 2/2 [00:00<00:00, 90200.09it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+2025-11-23 21:27:06,530 - __main__ - INFO -   Checking materials: 15/29
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 45100.04it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/13 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 13/13 [00:00<00:00, 626735.08it/s]
+2025-11-23 21:27:07,397 - __main__ - INFO -   Checking materials: 20/29
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/3 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 3/3 [00:00<00:00, 141381.03it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/8 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 8/8 [00:00<00:00, 385683.13it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/5 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 5/5 [00:00<00:00, 243854.88it/s]
+2025-11-23 21:27:08,404 - __main__ - INFO -   Checking materials: 25/29
+Retrieving SummaryDoc documents: 0it [00:00, ?it/s]Retrieving SummaryDoc documents: 0it [00:00, ?it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 49344.75it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 44620.26it/s]
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 45590.26it/s]
+2025-11-23 21:27:09,149 - __main__ - INFO -   Checking materials: 29/29
+Retrieving SummaryDoc documents:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 1/1 [00:00<00:00, 48210.39it/s]
+2025-11-23 21:27:09,355 - src.utils.material_database - INFO - Categorized 29 structures: 17 known, 12 novel
+2025-11-23 21:27:09,355 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:09,355 - __main__ - INFO - MATERIAL CATEGORIZATION RESULTS
+2025-11-23 21:27:09,355 - __main__ - INFO - ============================================================
+2025-11-23 21:27:09,355 - __main__ - INFO - Total structures: 29
+2025-11-23 21:27:09,355 - __main__ - INFO - Known materials: 17 (58.6%)
+2025-11-23 21:27:09,355 - __main__ - INFO - Novel materials: 12 (41.4%)
+2025-11-23 21:27:09,355 - __main__ - INFO - 
+Known materials found
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Ti2ZnO4: Ed = -6.709 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - ZnGeN2: Ed = -5.700 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Li2MgGeO4: Ed = -5.435 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - CaAl2O4: Ed = -5.400 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Li3SbO4: Ed = -5.243 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - YAlO3: Ed = -5.001 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - AlGaN2: Ed = -4.360 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - KLaS2: Ed = -4.314 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Mg(InSe2)2: Ed = -3.132 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - SrZnO2: Ed = -3.042 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Li2SiN2: Ed = -3.028 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - LiInSe2: Ed = -2.671 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - BaBeO3: Ed = -2.075 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Ca(ZnAs)2: Ed = -2.075 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - KF3: Ed = -2.063 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Sr(BN)2: Ed = -1.808 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Na3Sb: Ed = -1.403 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO - 
+Novel materials found
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Sc2SiO4: Ed = -7.479 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Ba2TiB3O8: Ed = -7.329 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Be2B2O5: Ed = -7.091 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Ba(SiN2)2: Ed = -6.670 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Al2Ga2O3: Ed = -5.242 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Mg2SiO3: Ed = -4.643 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - SrZrP2: Ed = -4.540 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - BaCdF4: Ed = -4.304 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - LiGaN2: Ed = -4.052 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - Zn(SeO)2: Ed = -3.751 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - ZnGeO4: Ed = -2.608 eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO -   - CuAlP2S6: Ed = inf eV/atom
+2025-11-23 21:27:09,355 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:09,355 - __main__ - INFO - SAVING RESULTS
+2025-11-23 21:27:09,355 - __main__ - INFO - ============================================================
+2025-11-23 21:27:09,355 - __main__ - INFO - Saving 12 novel structures...
+2025-11-23 21:27:09,357 - __main__ - INFO - Saving 17 known structures...
+2025-11-23 21:27:09,358 - __main__ - INFO - Saving all 29 structures...
+2025-11-23 21:27:09,361 - __main__ - INFO - 
+Saving 29 structures to data/results/run_20251123_212424
+2025-11-23 21:27:09,364 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:09,364 - __main__ - INFO - GENERATING VISUALIZATIONS
+2025-11-23 21:27:09,364 - __main__ - INFO - ============================================================
+2025-11-23 21:27:09,364 - __main__ - INFO - Creating energy distribution for novel materials...
+2025-11-23 21:27:09,553 - __main__ - INFO - Creating energy distribution for all materials...
+2025-11-23 21:27:09,727 - __main__ - INFO - Creating convergence plot...
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - FINAL STATISTICS - ALL STRUCTURES
+2025-11-23 21:27:10,022 - __main__ - INFO - ============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - Total generated: 29
+2025-11-23 21:27:10,022 - __main__ - INFO - Valid: 28 (96.6%)
+2025-11-23 21:27:10,022 - __main__ - INFO - Metastable: 28 (96.6%)
+2025-11-23 21:27:10,022 - __main__ - INFO - Stable: 28 (96.6%)
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - FINAL STATISTICS - NOVEL MATERIALS ONLY
+2025-11-23 21:27:10,022 - __main__ - INFO - ============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - Novel structures: 12
+2025-11-23 21:27:10,022 - __main__ - INFO - Novel valid: 11 (91.7%)
+2025-11-23 21:27:10,022 - __main__ - INFO - Novel stable: 11 (91.7%)
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+🌟 BEST NOVEL STRUCTURE:
+2025-11-23 21:27:10,022 - __main__ - INFO -    Formula: Sc2SiO4
+2025-11-23 21:27:10,022 - __main__ - INFO -    Decomposition energy: -7.479 eV/atom
+2025-11-23 21:27:10,022 - __main__ - INFO -    This material is NOT in Materials Project database!
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - RESULTS SUMMARY
+2025-11-23 21:27:10,022 - __main__ - INFO - ============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - Output directory: data/results/run_20251123_212424
+2025-11-23 21:27:10,022 - __main__ - INFO -   - novel_*.json: 12 novel materials
+2025-11-23 21:27:10,022 - __main__ - INFO -   - known_*.json: 17 known materials
+2025-11-23 21:27:10,022 - __main__ - INFO -   - all_*.json: 29 total materials
+2025-11-23 21:27:10,022 - __main__ - INFO -   - *.png: Visualization plots
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - FINAL STATISTICS
+2025-11-23 21:27:10,022 - __main__ - INFO - ============================================================
+2025-11-23 21:27:10,022 - __main__ - INFO - Total generated: 29
+2025-11-23 21:27:10,022 - __main__ - INFO - Valid: 28 (96.6%)
+2025-11-23 21:27:10,022 - __main__ - INFO - Metastable: 28 (96.6%)
+2025-11-23 21:27:10,022 - __main__ - INFO - Stable: 28 (96.6%)
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+Best structure: Sc2SiO4
+2025-11-23 21:27:10,022 - __main__ - INFO - Decomposition energy: -7.479 eV/atom
+2025-11-23 21:27:10,022 - __main__ - INFO - 
+Results saved to: data/results/run_20251123_212424
+Saved plot to data/results/run_20251123_212424/energy_distribution_novel.png
+Saved plot to data/results/run_20251123_212424/energy_distribution_all.png
+Saved plot to data/results/run_20251123_212424/convergence.png

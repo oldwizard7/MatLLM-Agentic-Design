@@ -1,0 +1,48 @@
+{
+  "formula": "Cu2O - Cubic Structure",
+  "lattice": [
+    [
+      4.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.3
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ]
+  ],
+  "species": [
+    "O",
+    "Cu",
+    "Cu"
+  ],
+  "energy": -1.167365550994873,
+  "decomposition_energy": -1.167365550994873,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

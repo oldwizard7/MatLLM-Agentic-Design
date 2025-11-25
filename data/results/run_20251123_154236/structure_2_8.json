@@ -1,0 +1,60 @@
+{
+  "formula": "CaSnO3 - Perovskite Structure",
+  "lattice": [
+    [
+      4.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.5
+    ]
+  ],
+  "positions": [
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ]
+  ],
+  "species": [
+    "Ca",
+    "O",
+    "O",
+    "O",
+    "Sn"
+  ],
+  "energy": 0.9842215776443481,
+  "decomposition_energy": 0.9842215776443481,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

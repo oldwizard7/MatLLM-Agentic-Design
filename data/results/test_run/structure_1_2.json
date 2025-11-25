@@ -1,0 +1,54 @@
+{
+  "formula": "LiCoO2 - Layered Structure",
+  "lattice": [
+    [
+      2.8,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      2.8,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      14.0
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.0,
+      0.5,
+      0.75
+    ],
+    [
+      0.5,
+      0.0,
+      0.75
+    ]
+  ],
+  "species": [
+    "Li",
+    "Co",
+    "O",
+    "O"
+  ],
+  "energy": -0.8814989924430847,
+  "decomposition_energy": -0.8814989924430847,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}

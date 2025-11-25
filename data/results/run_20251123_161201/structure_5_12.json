@@ -1,0 +1,54 @@
+{
+  "formula": "LiAgS2 - Layered Structure",
+  "lattice": [
+    [
+      6.042,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      6.042,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.247
+    ]
+  ],
+  "positions": [
+    [
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.25,
+      0.25,
+      0.25
+    ],
+    [
+      0.75,
+      0.75,
+      0.75
+    ]
+  ],
+  "species": [
+    "Li",
+    "Ag",
+    "S",
+    "S"
+  ],
+  "energy": -0.856822669506073,
+  "decomposition_energy": -0.856822669506073,
+  "properties": {},
+  "is_valid": true,
+  "is_relaxed": true,
+  "metadata": {}
+}
